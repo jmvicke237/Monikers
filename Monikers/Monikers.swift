@@ -62,8 +62,6 @@ class Monikers {
     init(teamOne nameOne: String, teamTwo nameTwo: String) {
         teamOne = Team(nameOne)
         teamTwo = Team(nameTwo)
-//        teamOneName = nameOne
-//        teamTwoName = nameTwo
         currentTeam = teamOne
         currentRound = .roundOne
         importNamesFromFile()
@@ -91,7 +89,7 @@ class Monikers {
     }
     
     private func determineRound() { //Called when the timer hits 0
-        if currentRound == .roundOne && answeredArray.count == 2 {//5 * numberOfPlayers {
+        if currentRound == .roundOne && answeredArray.count == 5 * numberOfPlayers {
             endOfRound = true
             namesArray.removeAll()
             namesArray = answeredArray
@@ -184,7 +182,7 @@ class Monikers {
         undoStack.removeAll()
         undoStack.append(name)
         kindOfUndo = .correct
-        if roundOneGuesses == 2 {//5 * numberOfPlayers {
+        if roundOneGuesses == 5 * numberOfPlayers {
             roundOneGuesses = 0
             namesArray.removeAll()
             time = 0
