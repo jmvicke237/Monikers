@@ -9,11 +9,11 @@
 import Foundation
 
 class Team {
-    var name: TeamName
+    var name: String
     var score = 0
     var isMyTurn = false
     
-    init(_ name: TeamName) {
+    init(_ name: String) {
         self.name = name
     }
 }

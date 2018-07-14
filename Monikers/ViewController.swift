@@ -22,15 +22,17 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         updateTeam()
     }
     
-    var game = Monikers()
+    lazy var game = Monikers(teamOne: teamOneName, teamTwo: teamTwoName)
     let selection = UISelectionFeedbackGenerator()
     var numberOfPlayers = 0
+    var teamOneName = ""
+    var teamTwoName = ""
     
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
-    @IBOutlet weak var currentTeam: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
     
     @IBAction func startButton(_ sender: UIButton) {
@@ -44,11 +46,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameOverSegue" {
             if let destinationVC = segue.destination as? EndGameVC {
-                destinationVC.teamOneName = game.teamOne.name.rawValue
-                destinationVC.teamTwoName = game.teamTwo.name.rawValue
+                destinationVC.teamOneName = game.teamOne.name
+                destinationVC.teamTwoName = game.teamTwo.name
                 destinationVC.teamOnePoints = game.teamOne.score
                 destinationVC.teamTwoPoints = game.teamTwo.score
-                destinationVC.winner = "Winner: " + game.winner
+                destinationVC.winner = game.winner
                 print(game.winner)
             }
         }
@@ -60,8 +62,8 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         game.teamChangeDelegate = self
         game.roundChangeDelegate = self
         nameLabel.text = ""
-        currentTeam.text = game.currentTeam.name.rawValue//("\(game.currentTeam.name)")
-        roundLabel.text = game.currentRound.rawValue//("\(game.currentRound)")
+        currentTeamGIF.loadGif(name: teamOneName + "-play")
+        roundLabel.text = game.currentRound.rawValue
         timerLabel.text = ("\(game.time)")
         print("Number of Players = \(numberOfPlayers)")
         game.numberOfPlayers = numberOfPlayers
@@ -79,11 +81,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateTeam() {
-        currentTeam.text = game.currentTeam.name.rawValue //("\(game.currentTeam.name)")
+        currentTeamGIF.loadGif(name: game.currentTeam.name + "-play")
     }
 
     @IBAction func reset(_ sender: UIButton) {
     }
+    
     @IBAction func panMonikersCard(_ sender: UIPanGestureRecognizer) {
         if game.turnInProgress {
             let card = sender.view!
@@ -143,6 +146,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     @IBAction func undoButton(_ sender: UIButton) {
         if !game.undoStack.isEmpty {
+            game.namesArray.append(nameLabel.text!)
             nameLabel.text = game.undoStack[0]
             game.undo()
         }

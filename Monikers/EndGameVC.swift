@@ -16,19 +16,19 @@ class EndGameVC: UIViewController {
     var teamTwoPoints = 0
     var winner = ""
     
-    @IBOutlet weak var teamOneNameLabel: UILabel!
-    @IBOutlet weak var teamTwoNameLabel: UILabel!
+    @IBOutlet weak var teamOneGIF: UIImageView!
+    @IBOutlet weak var teamTwoGIF: UIImageView!
     @IBOutlet weak var teamOneScoreLabel: UILabel!
     @IBOutlet weak var teamTwoScoreLabel: UILabel!
-    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var winnerGIF: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        teamOneNameLabel.text = teamOneName
-        teamTwoNameLabel.text = teamTwoName
+        teamOneGIF.loadGif(name: teamOneName + "-select")
+        teamTwoGIF.loadGif(name: teamTwoName + "-select")
         teamOneScoreLabel.text = "\(teamOnePoints)"
         teamTwoScoreLabel.text = "\(teamTwoPoints)"
-        winnerLabel.text = winner
+        winnerGIF.loadGif(name: winner + "-win")
     }
     
 

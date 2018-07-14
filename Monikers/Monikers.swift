@@ -23,8 +23,8 @@ protocol teamDelegate {
 
 class Monikers {
     var roundOneGuesses = 1
-    let teamOne = Team(.TeamOne)
-    let teamTwo = Team(.TeamTwo)
+    let teamOne: Team
+    let teamTwo: Team
     var namesArray = [String]()
     var skipArray = [String]()
     var answeredArray = [String]()
@@ -59,7 +59,11 @@ class Monikers {
     
     var timer = Timer()
     
-    init() {
+    init(teamOne nameOne: String, teamTwo nameTwo: String) {
+        teamOne = Team(nameOne)
+        teamTwo = Team(nameTwo)
+//        teamOneName = nameOne
+//        teamTwoName = nameTwo
         currentTeam = teamOne
         currentRound = .roundOne
         importNamesFromFile()
@@ -87,7 +91,7 @@ class Monikers {
     }
     
     private func determineRound() { //Called when the timer hits 0
-        if currentRound == .roundOne && answeredArray.count == 5 * numberOfPlayers {
+        if currentRound == .roundOne && answeredArray.count == 2 {//5 * numberOfPlayers {
             endOfRound = true
             namesArray.removeAll()
             namesArray = answeredArray
@@ -110,11 +114,11 @@ class Monikers {
                 break
             case .roundThree:
                 if teamOne.score > teamTwo.score {
-                    winner = teamOne.name.rawValue
+                    winner = teamOne.name
                 } else if teamOne.score < teamTwo.score {
-                    winner = teamTwo.name.rawValue
+                    winner = teamTwo.name
                 } else {
-                    winner = "It's a tie!"
+                    winner = "tie"
                 }
                 currentRound = .gameOver
                 print(winner)
@@ -138,12 +142,13 @@ class Monikers {
     private func switchTeams() {
         undoStack.removeAll()
         switch currentTeam.name {
-        case .TeamOne:
+        case teamOne.name:
             currentTeam = teamTwo
             break
-        case .TeamTwo:
+        case teamTwo.name:
             currentTeam = teamOne
             break
+        default: break
         }
     }
     
@@ -170,7 +175,7 @@ class Monikers {
             }
         } else {
             namesArray.removeAll()
-            namesArray.append("Game Over \n \(teamOne.name.rawValue): \(teamOne.score) \n \(teamTwo.name.rawValue): \(teamTwo.score)")
+            namesArray.append("Game Over \n \(teamOne.name): \(teamOne.score) \n \(teamTwo.name): \(teamTwo.score)")
             return nil
         }
     }
@@ -179,7 +184,7 @@ class Monikers {
         undoStack.removeAll()
         undoStack.append(name)
         kindOfUndo = .correct
-        if roundOneGuesses == 5 * numberOfPlayers {
+        if roundOneGuesses == 2 {//5 * numberOfPlayers {
             roundOneGuesses = 0
             namesArray.removeAll()
             time = 0
@@ -198,11 +203,12 @@ class Monikers {
         skipArray.append(name)
     }
     
-    func undo() { //when you click on the UNDO button you have to set nameLabel.text to the string that pops off undoStack THEN call this function
+    func undo() {
         if !undoStack.isEmpty {
             switch kindOfUndo {
             case .correct:
                 currentTeam.score -= 1
+                roundOneGuesses -= 1
                 answeredArray.removeLast()
                 undoStack.removeAll()
                 break
