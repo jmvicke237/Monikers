@@ -83,6 +83,15 @@
                                     <segue destination="nIj-aA-0sy" kind="show" id="K4c-Te-dXd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-gU-eIJ">
+                                <rect key="frame" x="20" y="631" width="71" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="undoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQX-VT-LGn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47327033486968983" blue="0.3888650509055942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -126,7 +135,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="932" y="60"/>
+            <point key="canvasLocation" x="931.88405797101461" y="59.510869565217398"/>
         </scene>
         <!--End GameVC-->
         <scene sceneID="bxu-un-E0M">
@@ -235,11 +244,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ada-Ag-DEC">
+                                <rect key="frame" x="87" y="143" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Z5-v6-mpd"/>
                     </view>
                     <connections>
+                        <outlet property="gifView" destination="ada-Ag-DEC" id="BJC-yH-T2K"/>
                         <outlet property="numberOfPlayerLabel" destination="cSv-7O-qLw" id="3vy-L6-WAH"/>
                         <outlet property="stepperOutlet" destination="sQ1-VC-Hyd" id="ZqT-2q-hxy"/>
                     </connections>

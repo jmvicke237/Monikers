@@ -28,9 +28,11 @@ class Monikers {
     var namesArray = [String]()
     var skipArray = [String]()
     var answeredArray = [String]()
+    var undoStack = [String]()
     var currentName = ""
     var numberOfPlayers = 0
     var winner = ""
+    var kindOfUndo: KindOfUndo = .correct
     var currentTeam: Team {
         didSet {
             teamChangeDelegate?.teamDidChange()
@@ -134,6 +136,7 @@ class Monikers {
     }
     
     private func switchTeams() {
+        undoStack.removeAll()
         switch currentTeam.name {
         case .TeamOne:
             currentTeam = teamTwo
@@ -173,6 +176,9 @@ class Monikers {
     }
     
     func correctGuess(_ name: String) {
+        undoStack.removeAll()
+        undoStack.append(name)
+        kindOfUndo = .correct
         if roundOneGuesses == 5 * numberOfPlayers {
             roundOneGuesses = 0
             namesArray.removeAll()
@@ -186,7 +192,26 @@ class Monikers {
     }
     
     func wrongGuess(_ name: String) {
+        undoStack.removeAll()
+        undoStack.append(name)
+        kindOfUndo = .skip
         skipArray.append(name)
+    }
+    
+    func undo() { //when you click on the UNDO button you have to set nameLabel.text to the string that pops off undoStack THEN call this function
+        if !undoStack.isEmpty {
+            switch kindOfUndo {
+            case .correct:
+                currentTeam.score -= 1
+                answeredArray.removeLast()
+                undoStack.removeAll()
+                break
+            case .skip:
+                skipArray.removeLast()
+                undoStack.removeAll()
+                break
+            }
+        }
     }
     
     func importNamesFromFile() {

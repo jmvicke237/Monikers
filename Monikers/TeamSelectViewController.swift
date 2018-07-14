@@ -12,6 +12,7 @@ class TeamSelectViewController: UIViewController {
 
     @IBOutlet weak var numberOfPlayerLabel: UILabel!
     @IBOutlet weak var stepperOutlet: UIStepper!
+    @IBOutlet weak var gifView: UIImageView!
     
     var numberOfPlayers = 4
     
@@ -19,6 +20,7 @@ class TeamSelectViewController: UIViewController {
         super.viewDidLoad()
         stepperOutlet.minimumValue = Double(numberOfPlayers)
         numberOfPlayerLabel.text = "\(numberOfPlayers)"
+        gifView.loadGif(name: "LOL")
     }
 
     @IBAction func numberOfPlayersStepper(_ sender: UIStepper) {

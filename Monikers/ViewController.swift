@@ -141,6 +141,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         }
     }
     
+    @IBAction func undoButton(_ sender: UIButton) {
+        if !game.undoStack.isEmpty {
+            nameLabel.text = game.undoStack[0]
+            game.undo()
+        }
+    }
     private func drawNewCard() {
         if let name = game.draw() {
             nameLabel.text = name
