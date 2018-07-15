@@ -22,6 +22,8 @@ protocol teamDelegate {
 }
 
 class Monikers {
+    let cardNumberMultiplier = 1
+    
     var roundOneGuesses = 1
     let teamOne: Team
     let teamTwo: Team
@@ -89,7 +91,7 @@ class Monikers {
     }
     
     private func determineRound() { //Called when the timer hits 0
-        if currentRound == .roundOne && answeredArray.count == 5 * numberOfPlayers {
+        if currentRound == .roundOne && answeredArray.count == cardNumberMultiplier * numberOfPlayers {
             endOfRound = true
             namesArray.removeAll()
             namesArray = answeredArray
@@ -182,7 +184,7 @@ class Monikers {
         undoStack.removeAll()
         undoStack.append(name)
         kindOfUndo = .correct
-        if roundOneGuesses == 5 * numberOfPlayers {
+        if roundOneGuesses == cardNumberMultiplier * numberOfPlayers {
             roundOneGuesses = 0
             namesArray.removeAll()
             time = 0
