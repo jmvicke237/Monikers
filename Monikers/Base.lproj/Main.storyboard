@@ -25,24 +25,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
-                                <rect key="frame" x="170" y="39" width="74" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
+                                <rect key="frame" x="154" y="39" width="92" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="umG-4p-zoJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="CYm-2G-qmy"/>
+                                    <constraint firstAttribute="width" constant="92" id="YdC-fF-WLr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
-                                <rect key="frame" x="271" y="39" width="123" height="30"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-Fk-ZaE">
-                                <rect key="frame" x="168.33333333333334" y="607.66666666666663" width="78" height="46.333333333333371"/>
-                                <color key="backgroundColor" red="1" green="0.97757909262080322" blue="0.10685527467361822" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-Fk-ZaE">
+                                <rect key="frame" x="168" y="613" width="78" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -50,7 +45,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07J-fW-JZT">
-                                <rect key="frame" x="337" y="686" width="39" height="30"/>
+                                <rect key="frame" x="337" y="683" width="48" height="33"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sh0-by-JrM"/>
@@ -58,12 +54,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-gU-eIJ">
-                                <rect key="frame" x="20" y="611" width="68" height="45"/>
+                                <rect key="frame" x="20" y="611" width="30" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="OgF-Ya-SEJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
-                                <state key="normal" title="Undo"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <state key="normal" title="↩︎"/>
                                 <connections>
                                     <action selector="undoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQX-VT-LGn"/>
                                 </connections>
@@ -71,12 +67,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-gg-hKd">
                                 <rect key="frame" x="20" y="39" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ymc-gD-Uh5"/>
+                                    <constraint firstAttribute="height" constant="100" id="QRr-Zn-p4k"/>
+                                    <constraint firstAttribute="width" constant="100" id="oae-vx-2MI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ7-RR-dr0">
-                                <rect key="frame" x="342.33333333333331" y="607.66666666666663" width="51.666666666666686" height="46.333333333333371"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
+                                <rect key="frame" x="342" y="613" width="30" height="41"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <state key="normal" title="II"/>
                                 <connections>
                                     <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1Y-bS-ktJ"/>
@@ -105,29 +102,33 @@
                                     <outletCollection property="gestureRecognizers" destination="ekG-iU-ILE" appends="YES" id="rRZ-T3-mag"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
+                                <rect key="frame" x="252" y="39" width="133" height="65"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47327033486968983" blue="0.3888650509055942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="1Fm-fn-RQ8"/>
+                            <constraint firstItem="ak9-zF-4W3" firstAttribute="trailing" secondItem="07J-fW-JZT" secondAttribute="trailing" id="144-Pb-sYy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9nZ-gU-eIJ" secondAttribute="bottom" constant="80" id="7JJ-vl-Zv5"/>
                             <constraint firstItem="n1x-Fk-ZaE" firstAttribute="top" secondItem="LJ7-RR-dr0" secondAttribute="top" id="7Jo-Wk-8G8"/>
                             <constraint firstItem="n1x-Fk-ZaE" firstAttribute="bottom" secondItem="LJ7-RR-dr0" secondAttribute="bottom" id="9cS-2y-KJ3"/>
                             <constraint firstItem="LJ7-RR-dr0" firstAttribute="leading" secondItem="n1x-Fk-ZaE" secondAttribute="trailing" constant="96" id="AXq-ut-39Y"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="baseline" secondItem="ak9-zF-4W3" secondAttribute="baseline" id="Byg-vK-IRV"/>
-                            <constraint firstItem="ak9-zF-4W3" firstAttribute="leading" secondItem="2Q2-VG-1XM" secondAttribute="trailing" constant="27" id="NX6-Df-FUO"/>
-                            <constraint firstItem="ak9-zF-4W3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OFs-Xb-IeK"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="firstBaseline" secondItem="ak9-zF-4W3" secondAttribute="firstBaseline" id="S8K-Ao-Trm"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVZ-6d-C0i"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CE6-EI-Cpt"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="2Q2-VG-1XM" secondAttribute="top" id="Mhw-G1-o4x"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" secondItem="9nZ-gU-eIJ" secondAttribute="leading" id="SRv-qx-syN"/>
                             <constraint firstItem="9nZ-gU-eIJ" firstAttribute="baseline" secondItem="n1x-Fk-ZaE" secondAttribute="firstBaseline" id="US8-XY-Edl"/>
-                            <constraint firstItem="n1x-Fk-ZaE" firstAttribute="centerX" secondItem="2Q2-VG-1XM" secondAttribute="centerX" id="UZN-k7-coT"/>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WXz-eP-ltW"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="leading" secondItem="dwC-gg-hKd" secondAttribute="trailing" constant="50" id="XRf-lc-vIx"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="leading" secondItem="dwC-gg-hKd" secondAttribute="trailing" constant="34" id="Zox-jt-OZh"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="firstBaseline" secondItem="ak9-zF-4W3" secondAttribute="firstBaseline" id="cZK-wO-L00"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="baseline" secondItem="ak9-zF-4W3" secondAttribute="baseline" id="f3t-Ia-b6O"/>
                             <constraint firstItem="07J-fW-JZT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="337" id="g3H-9U-FzA"/>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="2Q2-VG-1XM" secondAttribute="top" id="iOl-MR-w4q"/>
-                            <constraint firstItem="9nZ-gU-eIJ" firstAttribute="leading" secondItem="dwC-gg-hKd" secondAttribute="leading" id="rhg-8R-k3c"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="gqn-is-533"/>
+                            <constraint firstItem="ak9-zF-4W3" firstAttribute="leading" secondItem="2Q2-VG-1XM" secondAttribute="trailing" constant="6" id="oSR-Qu-3ec"/>
                             <constraint firstAttribute="bottom" secondItem="07J-fW-JZT" secondAttribute="bottom" constant="20" symbolic="YES" id="th2-T1-Arx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n1x-Fk-ZaE" secondAttribute="bottom" constant="82" id="u8E-Sg-9Zf"/>
-                            <constraint firstItem="LJ7-RR-dr0" firstAttribute="trailing" secondItem="ak9-zF-4W3" secondAttribute="trailing" id="uKV-L8-28g"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="trailing" secondItem="n1x-Fk-ZaE" secondAttribute="trailing" id="ua5-zt-iCG"/>
                             <constraint firstItem="n1x-Fk-ZaE" firstAttribute="baseline" secondItem="9nZ-gU-eIJ" secondAttribute="firstBaseline" id="yTY-ZD-Xt5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
