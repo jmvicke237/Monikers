@@ -27,6 +27,8 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     var numberOfPlayers = 0
     var teamOneName = ""
     var teamTwoName = ""
+    var paused = false
+    @IBOutlet weak var pauseButtonLabel: UIButton!
     
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -34,6 +36,19 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
+    
+    @IBAction func pauseButton(_ sender: UIButton) {
+        if !paused {
+            game.timer.invalidate()
+            pauseButtonLabel.setTitle(">", for: .normal)
+            paused = true
+        } else {
+            paused = false
+            game.timerStart()
+            pauseButtonLabel.setTitle("||", for: .normal)
+        }
+        
+    }
     
     @IBAction func startButton(_ sender: UIButton) {
         if !game.turnInProgress {
