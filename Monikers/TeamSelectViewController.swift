@@ -10,6 +10,7 @@ import UIKit
 
 class TeamSelectViewController: UIViewController {
 
+    @IBOutlet weak var teamOneLabel: UILabel!
     @IBOutlet weak var numberOfPlayerLabel: UILabel!
     @IBOutlet weak var stepperOutlet: UIStepper!
     @IBOutlet weak var teamOneGif: UIImageView!
