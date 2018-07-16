@@ -185,7 +185,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-vD-XdW">
                                 <rect key="frame" x="105" y="626" width="204" height="51"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <state key="normal" title="PLAY AGAIN"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="nIj-aA-0sy" kind="show" id="kgQ-Tv-Ylt"/>
                                 </connections>
@@ -194,7 +196,7 @@
                                 <rect key="frame" x="107" y="372.33333333333331" width="200" height="200"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.083076877989265024" green="0.85587593535842688" blue="0.99193829298019409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="YVA-yh-kzr" firstAttribute="top" secondItem="WEd-mU-bd2" secondAttribute="bottom" constant="83" id="4RM-EH-PHj"/>
                             <constraint firstItem="YVA-yh-kzr" firstAttribute="centerX" secondItem="aGH-eJ-sZ8" secondAttribute="centerX" id="7nd-TE-Ixv"/>
@@ -318,6 +320,6 @@
         <image name="ThumpDown" width="168" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K4c-Te-dXd"/>
+        <segue reference="kgQ-Tv-Ylt"/>
     </inferredMetricsTieBreakers>
 </document>

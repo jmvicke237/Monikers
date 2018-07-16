@@ -124,12 +124,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 if card.center.x < 75 {
                     selection.selectionChanged()
                     game.wrongGuess(nameLabel.text!)
-                    drawNewCard()
                     UIView.animate(withDuration: 0.3, animations: {
                         card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
+                        self.drawNewCard()
                         UIView.animate(withDuration: 0.3, animations: {
                         card.alpha = 1
                         })
@@ -138,12 +138,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 } else if card.center.x > (view.frame.width - 75) {
                     selection.selectionChanged()
                     game.correctGuess(nameLabel.text!)
-                    drawNewCard()
                     UIView.animate(withDuration: 0.3, animations: {
                         card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
+                        self.drawNewCard()
                         UIView.animate(withDuration: 0.3, animations: {
                             card.alpha = 1
                         })
