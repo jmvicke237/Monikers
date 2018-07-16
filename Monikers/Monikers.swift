@@ -94,7 +94,9 @@ class Monikers {
         if currentRound == .roundOne && answeredArray.count == cardNumberMultiplier * numberOfPlayers {
             endOfRound = true
             namesArray.removeAll()
+            print("names after remove = \(namesArray.count)")
             namesArray = answeredArray
+            print("names after equal answered = \(namesArray.count)")
             answeredArray.removeAll()
             skipArray.removeAll()
             currentRound = .roundTwo

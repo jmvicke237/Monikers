@@ -30,6 +30,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     var paused = false
     @IBOutlet weak var pauseButtonLabel: UIButton!
     
+    @IBOutlet weak var mainCard: MonikersCardView!
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
@@ -53,7 +54,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBAction func startButton(_ sender: UIButton) {
         if !game.turnInProgress {
             game.startTurn()
-            drawNewCard()
+            UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            self.drawNewCard()
+            UIView.animate(withDuration: 0.3, animations: {
+                self.mainCard.alpha = 1
+            })
         }
         
     }
@@ -82,6 +87,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         timerLabel.text = ("\(game.time)")
         print("Number of Players = \(numberOfPlayers)")
         game.numberOfPlayers = numberOfPlayers
+        mainCard.alpha = 0
     }
     
     private func updateTimer() {
@@ -89,6 +95,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateRound() {
+        mainCard.alpha = 0
         roundLabel.text = game.currentRound.rawValue
         if game.currentRound == .gameOver {
             self.performSegue(withIdentifier: "GameOverSegue", sender:self)
@@ -96,6 +103,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateTeam() {
+        mainCard.alpha = 0
         currentTeamGIF.loadGif(name: game.currentTeam.name + "-play")
     }
 
@@ -104,7 +112,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     @IBAction func panMonikersCard(_ sender: UIPanGestureRecognizer) {
         if game.turnInProgress {
-            let card = sender.view!
+            let card = sender.view! as! MonikersCardView
             let point = sender.translation(in: view)
             let xFromCenter = card.center.x - view.center.x
             
@@ -129,10 +137,18 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
+                        
                         self.drawNewCard()
-                        UIView.animate(withDuration: 0.3, animations: {
-                        card.alpha = 1
-                        })
+                        
+                        if self.nameLabel.text != "" {
+                            UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+                            
+                            
+                            
+                            UIView.animate(withDuration: 0.3, animations: {
+                            card.alpha = 1
+                            })
+                        }
                     })
                     return
                 } else if card.center.x > (view.frame.width - 75) {
@@ -143,10 +159,18 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
+                        
                         self.drawNewCard()
-                        UIView.animate(withDuration: 0.3, animations: {
-                            card.alpha = 1
-                        })
+                        
+                        if self.nameLabel.text != "" {
+                            UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+                            
+                            
+                            UIView.animate(withDuration: 0.3, animations: {
+                                card.alpha = 1
+                            })
+                        }
+                        
                     })
                     return
                 }
@@ -170,6 +194,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         if let name = game.draw() {
             nameLabel.text = name
         } else {
+            mainCard.alpha = 0
             game.time = 0
             nameLabel.text = ""
         }
