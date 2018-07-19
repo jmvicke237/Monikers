@@ -75,7 +75,7 @@ class Monikers {
     
     @objc private func timerDecrement() {
         time -= 1
-        if time <= 0 {
+        if time < 0 {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             AudioServicesPlayAlertSound(SystemSoundID(1322))
             timer.invalidate()
