@@ -9,8 +9,8 @@
 import Foundation
 
 enum Round: String {
-    case roundOne = "Round 1"
-    case roundTwo = "Round 2"
-    case roundThree = "Round 3"
+    case roundOne = "Rd 1"
+    case roundTwo = "Rd 2"
+    case roundThree = "Rd 3"
     case gameOver = "Game Over"
 }

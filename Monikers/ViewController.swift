@@ -52,6 +52,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     @IBAction func startButton(_ sender: UIButton) {
+        print("START!!!!")
         if !game.turnInProgress {
             game.startTurn()
             UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
@@ -88,6 +89,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         print("Number of Players = \(numberOfPlayers)")
         game.numberOfPlayers = numberOfPlayers
         mainCard.alpha = 0
+        mainCard.center = self.view.center
     }
     
     private func updateTimer() {
@@ -139,8 +141,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         self.thumbImageView.alpha = 0
                         
                         self.drawNewCard()
-                        
-                        if self.nameLabel.text != "" {
+                        print("text = " + self.nameLabel.text!)
+                        if self.nameLabel.text != "names empty" {
+                            print("FLIPPING!!!")
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             
                             
@@ -161,8 +164,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         self.thumbImageView.alpha = 0
                         
                         self.drawNewCard()
-                        
-                        if self.nameLabel.text != "" {
+                        print("text = " + self.nameLabel.text!)
+                        if self.nameLabel.text != "names empty" {
+                            print("FLIPPING!!!")
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             
                             
@@ -196,7 +200,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         } else {
             mainCard.alpha = 0
             game.time = 0
-            nameLabel.text = ""
+            nameLabel.text = "names empty"
         }
     }
  }

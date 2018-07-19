@@ -24,14 +24,13 @@ protocol teamDelegate {
 class Monikers {
     let cardNumberMultiplier = 1
     
-    var roundOneGuesses = 1
+    var roundOneGuesses = 0
     let teamOne: Team
     let teamTwo: Team
     var namesArray = [String]()
     var skipArray = [String]()
     var answeredArray = [String]()
     var undoStack = [String]()
-    var currentName = ""
     var numberOfPlayers = 0
     var winner = ""
     var kindOfUndo: KindOfUndo = .correct
@@ -92,6 +91,7 @@ class Monikers {
     
     private func determineRound() { //Called when the timer hits 0
         if currentRound == .roundOne && answeredArray.count == cardNumberMultiplier * numberOfPlayers {
+            roundOneGuesses = 0
             endOfRound = true
             namesArray.removeAll()
             print("names after remove = \(namesArray.count)")
@@ -186,15 +186,15 @@ class Monikers {
         undoStack.removeAll()
         undoStack.append(name)
         kindOfUndo = .correct
-        if roundOneGuesses == cardNumberMultiplier * numberOfPlayers {
-            roundOneGuesses = 0
-            namesArray.removeAll()
-            time = 0
-        }
         answeredArray.append(name)
         currentTeam.score += 1
         if currentRound == .roundOne {
             roundOneGuesses += 1
+        }
+        if roundOneGuesses == cardNumberMultiplier * numberOfPlayers {
+            namesArray.removeAll()
+            print("all removed")
+            time = 0
         }
     }
     
