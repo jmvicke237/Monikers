@@ -29,6 +29,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     var teamTwoName = ""
     var paused = false
     var rotationDivsor: CGFloat!
+    var storedPause = ""
 
     @IBOutlet weak var pauseButtonLabel: UIButton!
     @IBOutlet weak var monikersCardBack: MonikerCardBackView!
@@ -61,11 +62,22 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
             pauseButtonLabel.setTitle(">", for: .normal)
             game.turnInProgress = false
             paused = true
+            storedPause = nameLabel.text!
+            nameLabel.text = "PAUSED"
+            UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            UIView.animate(withDuration: 0.3, animations: {
+                self.mainCard.alpha = 1
+            })
         } else {
             paused = false
             game.timerStart()
             game.turnInProgress = true
             pauseButtonLabel.setTitle("||", for: .normal)
+            UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            UIView.animate(withDuration: 0.3, animations: {
+                self.mainCard.alpha = 1
+            })
+            nameLabel.text = storedPause
         }
         
     }
