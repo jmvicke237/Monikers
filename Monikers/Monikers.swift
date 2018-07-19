@@ -94,9 +94,7 @@ class Monikers {
             roundOneGuesses = 0
             endOfRound = true
             namesArray.removeAll()
-            print("names after remove = \(namesArray.count)")
             namesArray = answeredArray
-            print("names after equal answered = \(namesArray.count)")
             answeredArray.removeAll()
             skipArray.removeAll()
             currentRound = .roundTwo
@@ -123,7 +121,6 @@ class Monikers {
                     winner = "tie"
                 }
                 currentRound = .gameOver
-                print(winner)
                 break
             default: break
             }
@@ -193,7 +190,6 @@ class Monikers {
         }
         if roundOneGuesses == cardNumberMultiplier * numberOfPlayers {
             namesArray.removeAll()
-            print("all removed")
             time = 0
         }
     }
