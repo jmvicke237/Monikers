@@ -28,8 +28,10 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     var teamOneName = ""
     var teamTwoName = ""
     var paused = false
+    var rotationDivsor: CGFloat!
+
     @IBOutlet weak var pauseButtonLabel: UIButton!
-    
+    @IBOutlet weak var monikersCardBack: MonikerCardBackView!
     @IBOutlet weak var mainCard: MonikersCardView!
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -37,6 +39,21 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        game.timeIncrementDelegate = self
+        game.teamChangeDelegate = self
+        game.roundChangeDelegate = self
+        nameLabel.text = ""
+        currentTeamGIF.loadGif(name: teamOneName + "-play")
+        roundLabel.text = game.currentRound.rawValue
+        timerLabel.text = ("\(game.time)")
+        game.numberOfPlayers = numberOfPlayers
+        mainCard.alpha = 0
+        mainCard.center = self.view.center
+        rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
+    }
     
     @IBAction func pauseButton(_ sender: UIButton) {
         if !paused {
@@ -77,20 +94,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        game.timeIncrementDelegate = self
-        game.teamChangeDelegate = self
-        game.roundChangeDelegate = self
-        nameLabel.text = ""
-        currentTeamGIF.loadGif(name: teamOneName + "-play")
-        roundLabel.text = game.currentRound.rawValue
-        timerLabel.text = ("\(game.time)")
-        game.numberOfPlayers = numberOfPlayers
-        mainCard.alpha = 0
-        mainCard.center = self.view.center
-    }
-    
     private func updateTimer() {
         timerLabel.text = ("\(game.time)")
     }
@@ -118,6 +121,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
             let xFromCenter = card.center.x - view.center.x
             
             card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+            card.transform = CGAffineTransform(rotationAngle: xFromCenter / rotationDivsor)
             
             if xFromCenter > 0 {
                 thumbImageView.image = #imageLiteral(resourceName: "ThumpUp")
@@ -139,13 +143,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
+                        card.transform = CGAffineTransform.identity
                         self.game.wrongGuess(self.nameLabel.text!)
                         self.drawNewCard()
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-                            
-                            
-                            
                             UIView.animate(withDuration: 0.3, animations: {
                             card.alpha = 1
                             })
@@ -161,13 +163,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.alpha = 0
                     }, completion: {(finished:Bool) in card.center = self.view.center
                         self.thumbImageView.alpha = 0
-                        
+                        card.transform = CGAffineTransform.identity
                         self.game.correctGuess(self.nameLabel.text!)
                         self.drawNewCard()
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-                            
-                            
                             UIView.animate(withDuration: 0.3, animations: {
                                 card.alpha = 1
                             })

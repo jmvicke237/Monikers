@@ -25,8 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
-                                <rect key="frame" x="179" y="37" width="57" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
+                                <rect key="frame" x="185.66666666666666" y="29.333333333333332" width="43.666666666666657" height="38.666666666666671"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,8 +88,8 @@
                                     <constraint firstAttribute="height" constant="420" id="TeB-P1-o0S"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
-                                <rect key="frame" x="267.66666666666663" y="37" width="104.33333333333333" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
+                                <rect key="frame" x="267.66666666666669" y="29.333333333333332" width="104.33333333333331" height="38.666666666666671"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,6 +148,7 @@
                     <connections>
                         <outlet property="currentTeamGIF" destination="dwC-gg-hKd" id="zKo-px-D06"/>
                         <outlet property="mainCard" destination="5fl-ri-jhV" id="EBw-c8-RYh"/>
+                        <outlet property="monikersCardBack" destination="PBZ-0e-Agd" id="QDq-xV-0uu"/>
                         <outlet property="nameLabel" destination="iIB-ac-wbe" id="qYe-KI-KYs"/>
                         <outlet property="pauseButtonLabel" destination="LJ7-RR-dr0" id="33Y-3P-Q5g"/>
                         <outlet property="roundLabel" destination="ak9-zF-4W3" id="HLA-d6-r2M"/>
