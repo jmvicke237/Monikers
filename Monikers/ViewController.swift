@@ -42,17 +42,19 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         if !paused {
             game.timer.invalidate()
             pauseButtonLabel.setTitle(">", for: .normal)
+            game.turnInProgress = false
             paused = true
         } else {
             paused = false
             game.timerStart()
+            game.turnInProgress = true
             pauseButtonLabel.setTitle("||", for: .normal)
         }
         
     }
     
     @IBAction func startButton(_ sender: UIButton) {
-        if !game.turnInProgress {
+        if !game.turnInProgress && !paused {
             game.startTurn()
             UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
             self.drawNewCard()
