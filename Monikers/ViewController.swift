@@ -120,7 +120,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
             let point = sender.translation(in: view)
             let xFromCenter = card.center.x - view.center.x
             let scaleSwipedCard = min(150 / abs(xFromCenter), 1)
-            let scaleBackCard = 0.8 + (abs(xFromCenter * 0.00133))
+            let scaleBackCard = 0.9 + (abs(xFromCenter * 0.00066667))
             
             card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
             card.transform = CGAffineTransform(rotationAngle: xFromCenter / rotationDivsor).scaledBy(x: scaleSwipedCard, y: scaleSwipedCard)
@@ -188,6 +188,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 UIView.animate(withDuration: 0.2, animations: {
                     card.center = self.view.center
                     card.transform = CGAffineTransform.identity
+                    self.monikersCardBack.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
                 })
                 self.thumbImageView.alpha = 0
             }
