@@ -52,7 +52,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     @IBAction func startButton(_ sender: UIButton) {
-        print("START!!!!")
         if !game.turnInProgress {
             game.startTurn()
             UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
@@ -72,7 +71,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 destinationVC.teamOnePoints = game.teamOne.score
                 destinationVC.teamTwoPoints = game.teamTwo.score
                 destinationVC.winner = game.winner
-                print(game.winner)
             }
         }
     }
@@ -86,7 +84,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         currentTeamGIF.loadGif(name: teamOneName + "-play")
         roundLabel.text = game.currentRound.rawValue
         timerLabel.text = ("\(game.time)")
-        print("Number of Players = \(numberOfPlayers)")
         game.numberOfPlayers = numberOfPlayers
         mainCard.alpha = 0
         mainCard.center = self.view.center
@@ -141,9 +138,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         self.thumbImageView.alpha = 0
                         
                         self.drawNewCard()
-                        print("text = " + self.nameLabel.text!)
                         if self.nameLabel.text != "names empty" {
-                            print("FLIPPING!!!")
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             
                             
@@ -164,9 +159,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         self.thumbImageView.alpha = 0
                         
                         self.drawNewCard()
-                        print("text = " + self.nameLabel.text!)
                         if self.nameLabel.text != "names empty" {
-                            print("FLIPPING!!!")
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             
                             
