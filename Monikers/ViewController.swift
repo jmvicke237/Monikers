@@ -31,6 +31,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     var rotationDivsor: CGFloat!
     var storedPause = ""
 
+    @IBOutlet weak var cardsRemaining: UILabel!
     @IBOutlet weak var pauseButtonLabel: UIButton!
     @IBOutlet weak var monikersCardBack: MonikerCardBackView!
     @IBOutlet weak var mainCard: MonikersCardView!
@@ -56,6 +57,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         mainCard.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
         changeTeamGIF.isHidden = true
+        cardsRemaining.text = "\((game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses)"
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
@@ -96,7 +98,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 self.mainCard.alpha = 1
             })
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -117,8 +118,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     private func updateRound() {
         //mainCard.alpha = 0
+        cardsRemaining.text = "\(game.namesArray.count)" //This is very bad coding. It should all be done through updateRemainingCards()
         roundLabel.text = game.currentRound.rawValue
-        self.nameLabel.text = self.game.currentRound.rawValue
+        self.nameLabel.text = "End of Round! \n Pass the phone! \n Begin \(self.game.currentRound.rawValue)"
         UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         UIView.animate(withDuration: 0.3, animations: {
             self.mainCard.alpha = 1
@@ -180,8 +182,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
             if sender.state == UIGestureRecognizerState.ended {
                 if card.center.x < 75 {
                     selection.selectionChanged()
-//                    game.wrongGuess(nameLabel.text!)
-//                    self.drawNewCard()
                     UIView.animate(withDuration: 0.3, animations: {
                         card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
                         card.alpha = 0
@@ -190,6 +190,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.transform = CGAffineTransform.identity
                         self.game.wrongGuess(self.nameLabel.text!)
                         self.drawNewCard()
+                        if self.game.currentRound != .roundOne {
+                            self.updateCardsRemaining()
+                        }
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             UIView.animate(withDuration: 0.3, animations: {
@@ -200,8 +203,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                     return
                 } else if card.center.x > (view.frame.width - 75) {
                     selection.selectionChanged()
-//                    game.correctGuess(nameLabel.text!)
-//                    self.drawNewCard()
                     UIView.animate(withDuration: 0.3, animations: {
                         card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                         card.alpha = 0
@@ -210,19 +211,13 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.transform = CGAffineTransform.identity
                         self.game.correctGuess(self.nameLabel.text!)
                         self.drawNewCard()
+                        self.updateCardsRemaining()
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             UIView.animate(withDuration: 0.3, animations: {
                                 card.alpha = 1
                             })
-                        } //else {
-//                            self.nameLabel.text = self.game.currentRound.rawValue
-//                            UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-//                            UIView.animate(withDuration: 0.3, animations: {
-//                                self.mainCard.alpha = 1
-//                            })
-//                        }
-                        
+                        }
                     })
                     return
                 }
@@ -234,6 +229,15 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 })
                 self.thumbImageView.alpha = 0
             }
+        }
+    }
+    
+    private func updateCardsRemaining() {
+        if game.currentRound != .roundOne {
+            cardsRemaining.text = "\(game.namesArray.count + 1)"
+        } else {
+            let cardsLeftRoundOne = (game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses
+            cardsRemaining.text = "\(cardsLeftRoundOne)"
         }
     }
     
