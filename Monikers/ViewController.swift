@@ -40,6 +40,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
+    @IBOutlet weak var changeTeamGIF: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         mainCard.alpha = 0
         mainCard.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
+        changeTeamGIF.isHidden = true
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
@@ -84,6 +86,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     @IBAction func startButton(_ sender: UIButton) {
         if !game.turnInProgress && !paused {
+            if !changeTeamGIF.isHidden {
+                changeTeamGIF.isHidden = true
+            }
             game.startTurn()
             UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
             self.drawNewCard()
@@ -111,15 +116,34 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateRound() {
-        mainCard.alpha = 0
+        //mainCard.alpha = 0
         roundLabel.text = game.currentRound.rawValue
+        self.nameLabel.text = self.game.currentRound.rawValue
+        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.mainCard.alpha = 1
+        })
+        changeTeamGIF.loadGif(name: "changeTeam")
+        if changeTeamGIF.isHidden{
+            changeTeamGIF.isHidden = false
+        }
+        
         if game.currentRound == .gameOver {
             self.performSegue(withIdentifier: "GameOverSegue", sender:self)
         }
     }
     
     private func updateTeam() {
-        mainCard.alpha = 0
+        //mainCard.alpha = 0
+        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.mainCard.alpha = 1
+        })
+        changeTeamGIF.loadGif(name: "changeTeam")
+        if changeTeamGIF.isHidden{
+            changeTeamGIF.isHidden = false
+        }
+        
         currentTeamGIF.loadGif(name: game.currentTeam.name + "-play")
     }
 
@@ -191,7 +215,13 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                             UIView.animate(withDuration: 0.3, animations: {
                                 card.alpha = 1
                             })
-                        }
+                        } //else {
+//                            self.nameLabel.text = self.game.currentRound.rawValue
+//                            UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+//                            UIView.animate(withDuration: 0.3, animations: {
+//                                self.mainCard.alpha = 1
+//                            })
+//                        }
                         
                     })
                     return

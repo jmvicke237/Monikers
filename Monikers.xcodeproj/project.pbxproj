@@ -10,6 +10,7 @@
 		2F07455820FC418300CD8979 /* MonikerCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07455720FC418300CD8979 /* MonikerCardBackView.swift */; };
 		2F0EE31620FBBC2600B3C5FB /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */; };
 		2F32831E20F3E9DE00C99669 /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */; };
+		2F5816382102732400D4D37C /* changeTeam.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5816372102732400D4D37C /* changeTeam.gif */; };
 		2F7990A020F0025D0054DE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79909F20F0025D0054DE3F /* AppDelegate.swift */; };
 		2F7990A220F0025D0054DE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7990A120F0025D0054DE3F /* ViewController.swift */; };
 		2F7990A520F0025D0054DE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7990A320F0025D0054DE3F /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		2F07455720FC418300CD8979 /* MonikerCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonikerCardBackView.swift; sourceTree = "<group>"; };
 		2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
+		2F5816372102732400D4D37C /* changeTeam.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = changeTeam.gif; sourceTree = "<group>"; };
 		2F79909C20F0025D0054DE3F /* Monikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monikers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F79909F20F0025D0054DE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7990A120F0025D0054DE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2FE432F120FA578E004B178F /* kindOfUndo.swift */,
 				2F81E03F20F1AC3A004E4DDF /* Team.swift */,
 				2F81E04120F1AC56004E4DDF /* TeamNames.swift */,
+				2F5816372102732400D4D37C /* changeTeam.gif */,
 				2F81E04320F1AC71004E4DDF /* Rounds.swift */,
 				2FE432FE20FA64E8004B178F /* TeamGifs */,
 				2F7990B720F0064D0054DE3F /* MonikersCardView.swift */,
@@ -315,6 +318,7 @@
 				2FE432FC20FA64DA004B178F /* twins-select.gif in Resources */,
 				2FE4332320FA67E0004B178F /* doll-select.gif in Resources */,
 				2FE4332420FA67E0004B178F /* doll-win.gif in Resources */,
+				2F5816382102732400D4D37C /* changeTeam.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

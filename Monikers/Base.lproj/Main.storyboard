@@ -26,13 +26,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
-                                <rect key="frame" x="189.66666666666666" y="30.666666666666668" width="35.666666666666657" height="37.333333333333329"/>
+                                <rect key="frame" x="185.66666666666666" y="29.333333333333332" width="43.666666666666657" height="38.666666666666671"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-Fk-ZaE">
-                                <rect key="frame" x="172.66666666666666" y="598" width="69" height="69"/>
+                                <rect key="frame" x="168.33333333333334" y="598" width="78" height="69"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07J-fW-JZT">
-                                <rect key="frame" x="298.33333333333331" y="684" width="44" height="32"/>
+                                <rect key="frame" x="295.33333333333331" y="683" width="48" height="33"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reset"/>
@@ -64,13 +64,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-gg-hKd">
-                                <rect key="frame" x="40" y="39" width="100" height="100"/>
+                                <rect key="frame" x="38" y="39" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dwC-gg-hKd" secondAttribute="height" multiplier="1:1" id="qb5-Vf-a5Y"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ7-RR-dr0">
-                                <rect key="frame" x="364" y="607.66666666666663" width="30" height="50"/>
+                                <rect key="frame" x="364" y="607.33333333333337" width="30" height="51"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="II"/>
@@ -89,7 +89,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
-                                <rect key="frame" x="269.66666666666669" y="30.666666666666668" width="102.33333333333331" height="37.333333333333329"/>
+                                <rect key="frame" x="267.66666666666669" y="29.333333333333332" width="104.33333333333331" height="38.666666666666671"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,6 +109,10 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ThumpDown" translatesAutoresizingMaskIntoConstraints="NO" id="xXO-EJ-yHb">
                                         <rect key="frame" x="41" y="106" width="168" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="changeTeam.gif" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-cf-DYa">
+                                        <rect key="frame" x="8" y="274" width="238" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,6 +150,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="changeTeamGIF" destination="0nf-cf-DYa" id="LCA-8Y-y7y"/>
                         <outlet property="currentTeamGIF" destination="dwC-gg-hKd" id="zKo-px-D06"/>
                         <outlet property="mainCard" destination="5fl-ri-jhV" id="EBw-c8-RYh"/>
                         <outlet property="monikersCardBack" destination="PBZ-0e-Agd" id="QDq-xV-0uu"/>
@@ -376,6 +381,7 @@
     </scenes>
     <resources>
         <image name="ThumpDown" width="168" height="160"/>
+        <image name="changeTeam.gif" width="200" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K4c-Te-dXd"/>
