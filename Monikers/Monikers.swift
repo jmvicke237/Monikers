@@ -21,9 +21,13 @@ protocol teamDelegate {
     func teamDidChange()
 }
 
+protocol turnDelegate {
+    func turnDidChange()
+}
+
 class Monikers {
     let cardNumberMultiplier = 1
-    
+    var paused = false
     var roundOneGuesses = 0
     let teamOne: Team
     let teamTwo: Team
@@ -34,21 +38,30 @@ class Monikers {
     var numberOfPlayers = 0
     var winner = ""
     var kindOfUndo: KindOfUndo = .correct
+    var roundScore = 0
+    var endOfRound = false
+    
     var currentTeam: Team {
         didSet {
             teamChangeDelegate?.teamDidChange()
         }
     }
+    
     var currentRound: Round {
         didSet {
             roundChangeDelegate?.roundDidChange()
         }
     }
-    var roundScore = 0
-    var endOfRound = false
+    
     var time = 60 {
         didSet {
             timeIncrementDelegate?.timeDidChange()
+        }
+    }
+    
+    var turnNotRoundChanged = false {
+        didSet {
+            turnChangeDelegate?.turnDidChange()
         }
     }
     
@@ -57,6 +70,7 @@ class Monikers {
     var timeIncrementDelegate: timeDelegate? = nil
     var roundChangeDelegate: roundDelegate? = nil
     var teamChangeDelegate: teamDelegate? = nil
+    var turnChangeDelegate: turnDelegate? = nil
     
     var timer = Timer()
     
@@ -128,13 +142,13 @@ class Monikers {
             endOfRound = false
             return
         } else {
-            determineNextTeam()
             for name in skipArray {
                 if !namesArray.contains(name) {
                     namesArray.append(name)
                 }
             }
             skipArray.removeAll()
+            determineNextTeam()
         }
     }
     
@@ -162,6 +176,7 @@ class Monikers {
             }
         } else {
             switchTeams()
+            turnNotRoundChanged = !turnNotRoundChanged
         }
     }
     
@@ -215,6 +230,18 @@ class Monikers {
                 undoStack.removeAll()
                 break
             }
+        }
+    }
+    
+    func pause() -> Bool {
+        if !paused {
+            timer.invalidate()
+            paused = true
+            return false
+        } else {
+            paused = false
+            timerStart()
+            return true
         }
     }
     

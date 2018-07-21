@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegate {
+class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegate, turnDelegate {
     
     func timeDidChange() {
         updateTimer()
@@ -20,6 +20,10 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     func teamDidChange() {
         updateTeam()
+    }
+    
+    func turnDidChange() {
+        updateTurnChangeInstructions()
     }
     
     lazy var game = Monikers(teamOne: teamOneName, teamTwo: teamTwoName)
@@ -48,6 +52,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         game.timeIncrementDelegate = self
         game.teamChangeDelegate = self
         game.roundChangeDelegate = self
+        game.turnChangeDelegate = self
         nameLabel.text = ""
         currentTeamGIF.loadGif(name: teamOneName + "-play")
         roundLabel.text = game.currentRound.rawValue
@@ -61,29 +66,24 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
-        if !paused {
-            game.timer.invalidate()
-            pauseButtonLabel.setTitle(">", for: .normal)
-            game.turnInProgress = false
-            paused = true
-            storedPause = nameLabel.text!
-            nameLabel.text = "PAUSED"
-            UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-            UIView.animate(withDuration: 0.3, animations: {
-                self.mainCard.alpha = 1
-            })
-        } else {
-            paused = false
-            game.timerStart()
-            game.turnInProgress = true
-            pauseButtonLabel.setTitle("||", for: .normal)
-            UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-            UIView.animate(withDuration: 0.3, animations: {
-                self.mainCard.alpha = 1
-            })
-            nameLabel.text = storedPause
+        if game.turnInProgress {
+            if !game.pause() {
+                pauseButtonLabel.setTitle(">", for: .normal)
+                storedPause = nameLabel.text!
+                nameLabel.text = "PAUSED"
+                UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.mainCard.alpha = 1
+                })
+            } else {
+                pauseButtonLabel.setTitle("||", for: .normal)
+                UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.mainCard.alpha = 1
+                })
+                nameLabel.text = storedPause
+            }
         }
-        
     }
     
     @IBAction func startButton(_ sender: UIButton) {
@@ -100,18 +100,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GameOverSegue" {
-            if let destinationVC = segue.destination as? EndGameVC {
-                destinationVC.teamOneName = game.teamOne.name
-                destinationVC.teamTwoName = game.teamTwo.name
-                destinationVC.teamOnePoints = game.teamOne.score
-                destinationVC.teamTwoPoints = game.teamTwo.score
-                destinationVC.winner = game.winner
-            }
-        }
-    }
-    
     private func updateTimer() {
         timerLabel.text = ("\(game.time)")
     }
@@ -120,7 +108,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         //mainCard.alpha = 0
         cardsRemaining.text = "\(game.namesArray.count)" //This is very bad coding. It should all be done through updateRemainingCards()
         roundLabel.text = game.currentRound.rawValue
-        self.nameLabel.text = "End of Round! \n Pass the phone! \n Begin \(self.game.currentRound.rawValue)"
+        nameLabel.text = "End of Round! \n Pass the phone and begin \(game.currentRound.rawValue)!"
         UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         UIView.animate(withDuration: 0.3, animations: {
             self.mainCard.alpha = 1
@@ -133,6 +121,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         if game.currentRound == .gameOver {
             self.performSegue(withIdentifier: "GameOverSegue", sender:self)
         }
+    }
+    
+    private func updateTurnChangeInstructions() {
+        cardsRemaining.text = "\(game.namesArray.count)"
+        nameLabel.text = "End of Turn! \n Pass the phone!"
     }
     
     private func updateTeam() {
@@ -153,7 +146,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     @IBAction func panMonikersCard(_ sender: UIPanGestureRecognizer) {
-        if game.turnInProgress {
+        if game.turnInProgress && !paused {
             let card = sender.view! as! MonikersCardView
             let point = sender.translation(in: view)
             let xFromCenter = card.center.x - view.center.x
@@ -255,6 +248,18 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
             mainCard.alpha = 0
             game.time = 0
             nameLabel.text = nil
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GameOverSegue" {
+            if let destinationVC = segue.destination as? EndGameVC {
+                destinationVC.teamOneName = game.teamOne.name
+                destinationVC.teamTwoName = game.teamTwo.name
+                destinationVC.teamOnePoints = game.teamOne.score
+                destinationVC.teamTwoPoints = game.teamTwo.score
+                destinationVC.winner = game.winner
+            }
         }
     }
  }
