@@ -79,7 +79,7 @@ class Monikers {
         teamTwo = Team(nameTwo)
         currentTeam = teamOne
         currentRound = .roundOne
-        importNamesFromFile()
+        //importNamesFromFile()
     }
     
     func timerStart() {

@@ -194,7 +194,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="931.88405797101461" y="59.510869565217398"/>
+            <point key="canvasLocation" x="894" y="-333"/>
         </scene>
         <!--End GameVC-->
         <scene sceneID="bxu-un-E0M">
@@ -296,6 +296,305 @@
             </objects>
             <point key="canvasLocation" x="1605.7971014492755" y="79.891304347826093"/>
         </scene>
+        <!--Draft Or PlayVC-->
+        <scene sceneID="lPN-NH-aoz">
+            <objects>
+                <viewController id="JC6-iE-ZCf" customClass="DraftOrPlayVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Hm-pm-QKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass the phone to the next player to select cards." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-0l-Zon">
+                                <rect key="frame" x="37" y="85" width="291" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or if everyone has has gone, start the game." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCn-xU-GNc">
+                                <rect key="frame" x="37" y="261" width="291" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-Kn-tU9">
+                                <rect key="frame" x="110" y="533" width="194" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-eK-iYC">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="51"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="Select cards">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="draftButton:" destination="JC6-iE-ZCf" eventType="touchUpInside" id="nqe-OP-Jfg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-Vn-cLs">
+                                        <rect key="frame" x="0.0" y="61" width="177" height="51"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="Start game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButton:" destination="JC6-iE-ZCf" eventType="touchUpInside" id="hUN-4m-O7k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="j3c-RI-owY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7R1-bU-mAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963.7681159420292" y="743.47826086956525"/>
+        </scene>
+        <!--InstructionsVC-->
+        <scene sceneID="Wz6-5W-xyD">
+            <objects>
+                <viewController id="DKY-9k-QIb" customClass="InstructionsVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7c-G5-XNx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84t-bB-oI6" userLabel="Instructions">
+                                <rect key="frame" x="20" y="66" width="374" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-cy-dLh">
+                                <rect key="frame" x="110" y="625" width="194" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <state key="normal" title="Select cards">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCardsButton:" destination="DKY-9k-QIb" eventType="touchUpInside" id="AB0-9z-XDr"/>
+                                    <segue destination="996-fF-bhy" kind="show" identifier="DraftingSegue" id="W9h-zO-7JX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="z90-Wt-UBb"/>
+                    </view>
+                    <connections>
+                        <outlet property="instructionsText" destination="84t-bB-oI6" id="dOV-IN-zu0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDB-2F-6lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67" y="470"/>
+        </scene>
+        <!--DraftingVC-->
+        <scene sceneID="mPa-8g-1DR">
+            <objects>
+                <viewController id="996-fF-bhy" customClass="DraftingVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fbl-Gk-n44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3c-b9-raE" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
+                                <rect key="frame" x="80" y="158" width="254" height="420"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-HO-qA3" customClass="DraftCardView" customModule="Monikers" customModuleProvider="target">
+                                <rect key="frame" x="80" y="158" width="254" height="420"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-dN-qrt">
+                                        <rect key="frame" x="8" y="78" width="238" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ThumpDown" translatesAutoresizingMaskIntoConstraints="NO" id="Zl4-XQ-wIs">
+                                        <rect key="frame" x="41" y="106" width="168" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ekv-Ck-Ku5" appends="YES" id="51D-ov-n8f"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NWn-EK-sim">
+                                <rect key="frame" x="67" y="631" width="280" height="61"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z35-yX-z4L" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ewd-m3-yDG">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2b-Wn-HXT">
+                                                <rect key="frame" x="4" y="17" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="ms0-bY-25H"/>
+                                            <constraint firstAttribute="height" constant="61" id="pTq-Oa-WF4"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-bu-VfN" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="60" y="0.0" width="40" height="61"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SOY-ug-dib">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDW-Dv-j8Z">
+                                                <rect key="frame" x="4" y="17" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FJb-G0-ru9"/>
+                                            <constraint firstAttribute="height" constant="61" id="hdw-rU-IHK"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51j-JN-jEl" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="120" y="0.0" width="40" height="61"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VVd-cc-K0m">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2d-ES-fi0">
+                                                <rect key="frame" x="4" y="17" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="qiT-j0-Q1V"/>
+                                            <constraint firstAttribute="width" constant="40" id="vsG-0y-jn7"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7D-PL-NL3" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="180" y="0.0" width="40" height="61"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fPv-Hi-e0Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgX-iT-8qg">
+                                                <rect key="frame" x="4" y="17" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="hTa-Pw-ie4"/>
+                                            <constraint firstAttribute="width" constant="40" id="yoX-Aa-W9s"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-QQ-2Ru" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="240" y="0.0" width="40" height="61"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-kg-ceJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHz-3s-pnc">
+                                                <rect key="frame" x="4" y="17" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="9eA-Jl-y58"/>
+                                            <constraint firstAttribute="width" constant="40" id="qxT-ne-iqc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="I3T-mB-npc"/>
+                                    <constraint firstAttribute="height" constant="61" id="Qk3-9t-fWt"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose your five cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-CO-99B">
+                                <rect key="frame" x="69" y="20" width="277" height="101"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="centerY" secondItem="Fbl-Gk-n44" secondAttribute="centerY" id="055-rh-uvV"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="leading" secondItem="opw-7c-v9m" secondAttribute="leading" constant="80" id="083-0K-RYH"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="top" secondItem="0X7-CO-99B" secondAttribute="bottom" constant="37" id="2Wv-vg-rap"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="centerX" secondItem="0X7-CO-99B" secondAttribute="centerX" id="6uZ-hu-W9u"/>
+                            <constraint firstItem="NWn-EK-sim" firstAttribute="centerX" secondItem="Fbl-Gk-n44" secondAttribute="centerX" id="EA5-Bg-G8U"/>
+                            <constraint firstItem="opw-7c-v9m" firstAttribute="bottom" secondItem="NWn-EK-sim" secondAttribute="bottom" constant="44" id="RN7-V2-2dQ"/>
+                            <constraint firstItem="NWn-EK-sim" firstAttribute="top" secondItem="Y3c-b9-raE" secondAttribute="bottom" constant="53" id="U7x-5B-mLf"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="centerX" secondItem="NWn-EK-sim" secondAttribute="centerX" id="x4Y-yW-fkk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="opw-7c-v9m"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardBackView" destination="Y3c-b9-raE" id="0bp-A0-Hx8"/>
+                        <outlet property="mainCard" destination="lTh-HO-qA3" id="PXr-cp-AXG"/>
+                        <outlet property="mainCardLabel" destination="F8C-dN-qrt" id="5wa-gA-RjP"/>
+                        <outlet property="thumbImageView" destination="Zl4-XQ-wIs" id="RmK-tx-aQH"/>
+                        <outletCollection property="cardRemainingImage" destination="Ewd-m3-yDG" collectionClass="NSMutableArray" id="Cmv-Af-VZ5"/>
+                        <outletCollection property="cardRemainingImage" destination="SOY-ug-dib" collectionClass="NSMutableArray" id="i6B-0l-3N1"/>
+                        <outletCollection property="cardRemainingImage" destination="VVd-cc-K0m" collectionClass="NSMutableArray" id="zK6-Oo-INj"/>
+                        <outletCollection property="cardRemainingImage" destination="fPv-Hi-e0Y" collectionClass="NSMutableArray" id="cIu-Od-WLo"/>
+                        <outletCollection property="cardRemainingImage" destination="vVx-kg-ceJ" collectionClass="NSMutableArray" id="Kgk-ri-8da"/>
+                        <outletCollection property="cardRemainingLabel" destination="o2b-Wn-HXT" collectionClass="NSMutableArray" id="5gE-oB-VX4"/>
+                        <outletCollection property="cardRemainingLabel" destination="YDW-Dv-j8Z" collectionClass="NSMutableArray" id="6ut-XN-SF7"/>
+                        <outletCollection property="cardRemainingLabel" destination="C2d-ES-fi0" collectionClass="NSMutableArray" id="8aO-wH-KNQ"/>
+                        <outletCollection property="cardRemainingLabel" destination="EgX-iT-8qg" collectionClass="NSMutableArray" id="IW5-cc-0rc"/>
+                        <outletCollection property="cardRemainingLabel" destination="BHz-3s-pnc" collectionClass="NSMutableArray" id="Z09-i5-N9q"/>
+                        <segue destination="JC6-iE-ZCf" kind="show" identifier="DraftOrPlaySegue" id="xBb-R2-No9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaA-ua-MfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ekv-Ck-Ku5">
+                    <connections>
+                        <action selector="panRecognizer:" destination="996-fF-bhy" id="RIi-gR-gM8"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="871" y="633"/>
+        </scene>
         <!--Team Select View Controller-->
         <scene sceneID="j2h-II-tEx">
             <objects>
@@ -358,7 +657,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playButton:" destination="nIj-aA-0sy" eventType="touchUpInside" id="EdS-xF-Viq"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="GoToGame" id="pCC-Wd-gWj"/>
+                                    <segue destination="DKY-9k-QIb" kind="show" identifier="DraftInstructionsSegue" id="voj-nq-3Pn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -400,7 +699,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfK-ok-IGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130.43478260869566" y="79.891304347826093"/>
+            <point key="canvasLocation" x="-691" y="148"/>
         </scene>
     </scenes>
     <resources>

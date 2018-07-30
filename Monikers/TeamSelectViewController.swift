@@ -40,11 +40,16 @@ class TeamSelectViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToGame" {
+        if segue.identifier == "PlayGameSegue" {
             if let destinationVC = segue.destination as? ViewController {
                 destinationVC.numberOfPlayers = numberOfPlayers
                 destinationVC.teamOneName = teamOneName
                 destinationVC.teamTwoName = teamTwoName
+            }
+        }
+        if segue.identifier == "DraftInstructionsSegue" {
+            if let destinationVC = segue.destination as? InstructionsVC {
+                destinationVC.numberOfPlayers = numberOfPlayers
             }
         }
     }

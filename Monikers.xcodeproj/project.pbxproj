@@ -10,6 +10,10 @@
 		2F07455820FC418300CD8979 /* MonikerCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07455720FC418300CD8979 /* MonikerCardBackView.swift */; };
 		2F0EE31620FBBC2600B3C5FB /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */; };
 		2F32831E20F3E9DE00C99669 /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */; };
+		2F35CECE210C0817004953C9 /* DraftCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CECD210C0817004953C9 /* DraftCardView.swift */; };
+		2F35CED0210E9EFB004953C9 /* DraftingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CECF210E9EFB004953C9 /* DraftingVC.swift */; };
+		2F35CED2210E9F1F004953C9 /* DraftingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED1210E9F1F004953C9 /* DraftingModel.swift */; };
+		2F35CED4210F658A004953C9 /* DraftOrPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */; };
 		2F5816382102732400D4D37C /* changeTeam.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5816372102732400D4D37C /* changeTeam.gif */; };
 		2F7990A020F0025D0054DE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79909F20F0025D0054DE3F /* AppDelegate.swift */; };
 		2F7990A220F0025D0054DE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7990A120F0025D0054DE3F /* ViewController.swift */; };
@@ -23,6 +27,7 @@
 		2F81E04220F1AC56004E4DDF /* TeamNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F81E04120F1AC56004E4DDF /* TeamNames.swift */; };
 		2F81E04420F1AC71004E4DDF /* Rounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F81E04320F1AC71004E4DDF /* Rounds.swift */; };
 		2F98899020F523FC000860E9 /* EndGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98898F20F523FC000860E9 /* EndGameVC.swift */; };
+		2FD0124C210BAB44007893AE /* InstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0124B210BAB44007893AE /* InstructionsVC.swift */; };
 		2FE432EE20FA49C7004B178F /* Swift+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE432ED20FA49C7004B178F /* Swift+GIF.swift */; };
 		2FE432F020FA4B5C004B178F /* tie-win.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FE432EF20FA4B5C004B178F /* tie-win.gif */; };
 		2FE432F220FA578E004B178F /* kindOfUndo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE432F120FA578E004B178F /* kindOfUndo.swift */; };
@@ -53,6 +58,10 @@
 		2F07455720FC418300CD8979 /* MonikerCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonikerCardBackView.swift; sourceTree = "<group>"; };
 		2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
+		2F35CECD210C0817004953C9 /* DraftCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCardView.swift; sourceTree = "<group>"; };
+		2F35CECF210E9EFB004953C9 /* DraftingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingVC.swift; sourceTree = "<group>"; };
+		2F35CED1210E9F1F004953C9 /* DraftingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingModel.swift; sourceTree = "<group>"; };
+		2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DraftOrPlayVC.swift; path = Monikers/DraftOrPlayVC.swift; sourceTree = "<group>"; };
 		2F5816372102732400D4D37C /* changeTeam.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = changeTeam.gif; sourceTree = "<group>"; };
 		2F79909C20F0025D0054DE3F /* Monikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monikers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F79909F20F0025D0054DE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +77,7 @@
 		2F81E04120F1AC56004E4DDF /* TeamNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNames.swift; sourceTree = "<group>"; };
 		2F81E04320F1AC71004E4DDF /* Rounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rounds.swift; sourceTree = "<group>"; };
 		2F98898F20F523FC000860E9 /* EndGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameVC.swift; sourceTree = "<group>"; };
+		2FD0124B210BAB44007893AE /* InstructionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVC.swift; sourceTree = "<group>"; };
 		2FE432ED20FA49C7004B178F /* Swift+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+GIF.swift"; sourceTree = "<group>"; };
 		2FE432EF20FA4B5C004B178F /* tie-win.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tie-win.gif"; sourceTree = "<group>"; };
 		2FE432F120FA578E004B178F /* kindOfUndo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kindOfUndo.swift; sourceTree = "<group>"; };
@@ -108,6 +118,7 @@
 		2F79909320F0025D0054DE3F = {
 			isa = PBXGroup;
 			children = (
+				2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */,
 				2F79909E20F0025D0054DE3F /* Monikers */,
 				2F79909D20F0025D0054DE3F /* Products */,
 			);
@@ -125,25 +136,29 @@
 			isa = PBXGroup;
 			children = (
 				2F79909F20F0025D0054DE3F /* AppDelegate.swift */,
-				2F7990A120F0025D0054DE3F /* ViewController.swift */,
-				2F81E03D20F1ABD1004E4DDF /* Monikers.swift */,
-				2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */,
-				2FE432F120FA578E004B178F /* kindOfUndo.swift */,
-				2F81E03F20F1AC3A004E4DDF /* Team.swift */,
-				2F81E04120F1AC56004E4DDF /* TeamNames.swift */,
-				2F5816372102732400D4D37C /* changeTeam.gif */,
-				2F81E04320F1AC71004E4DDF /* Rounds.swift */,
-				2FE432FE20FA64E8004B178F /* TeamGifs */,
-				2F7990B720F0064D0054DE3F /* MonikersCardView.swift */,
-				2F07455720FC418300CD8979 /* MonikerCardBackView.swift */,
-				2F7990A320F0025D0054DE3F /* Main.storyboard */,
-				2FE432ED20FA49C7004B178F /* Swift+GIF.swift */,
-				2F98898F20F523FC000860E9 /* EndGameVC.swift */,
-				2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */,
-				2F7990B520F0055F0054DE3F /* Names.txt */,
 				2F7990A620F0025E0054DE3F /* Assets.xcassets */,
-				2F7990A820F0025E0054DE3F /* LaunchScreen.storyboard */,
+				2F5816372102732400D4D37C /* changeTeam.gif */,
+				2F98898F20F523FC000860E9 /* EndGameVC.swift */,
+				2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */,
 				2F7990AB20F0025E0054DE3F /* Info.plist */,
+				2FD0124B210BAB44007893AE /* InstructionsVC.swift */,
+				2FE432F120FA578E004B178F /* kindOfUndo.swift */,
+				2F7990A820F0025E0054DE3F /* LaunchScreen.storyboard */,
+				2F7990A320F0025D0054DE3F /* Main.storyboard */,
+				2F35CED1210E9F1F004953C9 /* DraftingModel.swift */,
+				2F35CECF210E9EFB004953C9 /* DraftingVC.swift */,
+				2F07455720FC418300CD8979 /* MonikerCardBackView.swift */,
+				2F35CECD210C0817004953C9 /* DraftCardView.swift */,
+				2F81E03D20F1ABD1004E4DDF /* Monikers.swift */,
+				2F7990B720F0064D0054DE3F /* MonikersCardView.swift */,
+				2F7990B520F0055F0054DE3F /* Names.txt */,
+				2F81E04320F1AC71004E4DDF /* Rounds.swift */,
+				2FE432ED20FA49C7004B178F /* Swift+GIF.swift */,
+				2F81E03F20F1AC3A004E4DDF /* Team.swift */,
+				2FE432FE20FA64E8004B178F /* TeamGifs */,
+				2F81E04120F1AC56004E4DDF /* TeamNames.swift */,
+				2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */,
+				2F7990A120F0025D0054DE3F /* ViewController.swift */,
 			);
 			path = Monikers;
 			sourceTree = "<group>";
@@ -330,16 +345,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7990A220F0025D0054DE3F /* ViewController.swift in Sources */,
+				2F35CED0210E9EFB004953C9 /* DraftingVC.swift in Sources */,
 				2FE432F220FA578E004B178F /* kindOfUndo.swift in Sources */,
 				2F98899020F523FC000860E9 /* EndGameVC.swift in Sources */,
 				2F07455820FC418300CD8979 /* MonikerCardBackView.swift in Sources */,
+				2F35CED4210F658A004953C9 /* DraftOrPlayVC.swift in Sources */,
+				2F35CECE210C0817004953C9 /* DraftCardView.swift in Sources */,
 				2F7990A020F0025D0054DE3F /* AppDelegate.swift in Sources */,
 				2F81E04020F1AC3A004E4DDF /* Team.swift in Sources */,
 				2F81E03E20F1ABD1004E4DDF /* Monikers.swift in Sources */,
 				2F81E04220F1AC56004E4DDF /* TeamNames.swift in Sources */,
 				2F7990B820F0064D0054DE3F /* MonikersCardView.swift in Sources */,
 				2F32831E20F3E9DE00C99669 /* TeamSelectViewController.swift in Sources */,
+				2FD0124C210BAB44007893AE /* InstructionsVC.swift in Sources */,
 				2FE432EE20FA49C7004B178F /* Swift+GIF.swift in Sources */,
+				2F35CED2210E9F1F004953C9 /* DraftingModel.swift in Sources */,
 				2F81E04420F1AC71004E4DDF /* Rounds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
