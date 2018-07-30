@@ -11,8 +11,6 @@ import UIKit
 class TeamSelectViewController: UIViewController {
 
     @IBOutlet weak var teamOneLabel: UILabel!
-    @IBOutlet weak var numberOfPlayerLabel: UILabel!
-    @IBOutlet weak var stepperOutlet: UIStepper!
     @IBOutlet weak var teamOneGif: UIImageView!
     @IBOutlet weak var teamTwoGif: UIImageView!
     
@@ -25,15 +23,8 @@ class TeamSelectViewController: UIViewController {
         super.viewDidLoad()
         teamOneName = teamList.remove(at: teamList.count.arc4random)
         teamTwoName = teamList.remove(at: teamList.count.arc4random)
-        stepperOutlet.minimumValue = Double(numberOfPlayers)
-        numberOfPlayerLabel.text = "\(numberOfPlayers)"
         teamOneGif.loadGif(name: teamOneName + "-select")
         teamTwoGif.loadGif(name: teamTwoName + "-select")
-    }
-
-    @IBAction func numberOfPlayersStepper(_ sender: UIStepper) {
-        numberOfPlayers = Int(sender.value)
-        numberOfPlayerLabel.text = "\(numberOfPlayers)"
     }
     
     @IBAction func playButton(_ sender: UIButton) {
