@@ -10,6 +10,8 @@ import UIKit
 
 class InstructionsVC: UIViewController {
 
+    var teamOneName = ""
+    var teamTwoName = ""
     var numberOfPlayers = 0
     @IBOutlet weak var instructionsText: UILabel!
     @IBAction func selectCardsButton(_ sender: UIButton) {
@@ -28,7 +30,8 @@ class InstructionsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DraftingSegue" {
             if let destinationVC = segue.destination as? DraftingVC {
-                
+                destinationVC.teamOneName = teamOneName
+                destinationVC.teamTwoName = teamTwoName
             }
         }
     }

@@ -26,9 +26,10 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         updateTurnChangeInstructions()
     }
     
-    lazy var game = Monikers(teamOne: teamOneName, teamTwo: teamTwoName)
+    lazy var game = Monikers(teamOne: teamOneName, teamTwo: teamTwoName, namesArray)
+    var namesArray = [String]()
     let selection = UISelectionFeedbackGenerator()
-    var numberOfPlayers = 0
+//    var numberOfPlayers = 0
     var teamOneName = ""
     var teamTwoName = ""
     var paused = false
@@ -57,12 +58,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         currentTeamGIF.loadGif(name: teamOneName + "-play")
         roundLabel.text = game.currentRound.rawValue
         timerLabel.text = ("\(game.time)")
-        game.numberOfPlayers = numberOfPlayers
+//        game.numberOfPlayers = numberOfPlayers
         mainCard.alpha = 0
         mainCard.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
         changeTeamGIF.isHidden = true
-        cardsRemaining.text = "\((game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses)"
+        cardsRemaining.text = "\(namesArray.count)"//"\((game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses)"
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
@@ -183,9 +184,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.transform = CGAffineTransform.identity
                         self.game.wrongGuess(self.nameLabel.text!)
                         self.drawNewCard()
-                        if self.game.currentRound != .roundOne {
+//                        if self.game.currentRound != .roundOne {
                             self.updateCardsRemaining()
-                        }
+//                        }
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             UIView.animate(withDuration: 0.3, animations: {
@@ -226,12 +227,12 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateCardsRemaining() {
-        if game.currentRound != .roundOne {
+//        if game.currentRound != .roundOne {
             cardsRemaining.text = "\(game.namesArray.count + 1)"
-        } else {
-            let cardsLeftRoundOne = (game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses
-            cardsRemaining.text = "\(cardsLeftRoundOne)"
-        }
+//        } else {
+//            let cardsLeftRoundOne = (game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses
+//            cardsRemaining.text = "\(cardsLeftRoundOne)"
+//        }
     }
     
     @IBAction func undoButton(_ sender: UIButton) {

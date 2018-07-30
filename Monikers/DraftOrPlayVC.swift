@@ -11,6 +11,8 @@ import UIKit
 class DraftOrPlayVC: UIViewController {
 
     var namesForPlayArray = [String]()
+    var teamOneName = ""
+    var teamTwoName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +33,17 @@ class DraftOrPlayVC: UIViewController {
         print("\(namesForPlayArray)")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "DraftToGameSegue" {
+            if let destinationVC = segue.destination as? ViewController {
+                destinationVC.namesArray = namesForPlayArray
+                destinationVC.teamOneName = teamOneName
+                destinationVC.teamTwoName = teamTwoName
+            }
+        }
     }
-    */
+    
+    
 
 }
