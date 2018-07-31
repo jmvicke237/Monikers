@@ -47,6 +47,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
     @IBOutlet weak var changeTeamGIF: UIImageView!
+    @IBOutlet weak var startGameOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,9 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
         changeTeamGIF.isHidden = true
         cardsRemaining.text = "\(namesArray.count)"//"\((game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses)"
+        startGameOutlet.layer.borderWidth = 2
+        startGameOutlet.layer.cornerRadius = 5
+        startGameOutlet.layer.borderColor = UIColor.white.cgColor
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {

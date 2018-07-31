@@ -16,6 +16,7 @@ class EndGameVC: UIViewController {
     var teamTwoPoints = 0
     var winner = ""
     
+    @IBOutlet weak var playAgainOutlet: UIButton!
     @IBOutlet weak var teamOneGIF: UIImageView!
     @IBOutlet weak var teamTwoGIF: UIImageView!
     @IBOutlet weak var teamOneScoreLabel: UILabel!
@@ -29,6 +30,9 @@ class EndGameVC: UIViewController {
         teamOneScoreLabel.text = "\(teamOnePoints)"
         teamTwoScoreLabel.text = "\(teamTwoPoints)"
         winnerGIF.loadGif(name: winner + "-win")
+        playAgainOutlet.layer.borderWidth = 2
+        playAgainOutlet.layer.cornerRadius = 5
+        playAgainOutlet.layer.borderColor = UIColor.white.cgColor
     }
     
 

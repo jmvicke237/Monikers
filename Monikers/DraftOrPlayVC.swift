@@ -14,9 +14,17 @@ class DraftOrPlayVC: UIViewController {
     var teamOneName = ""
     var teamTwoName = ""
     
+    @IBOutlet weak var selectCardsOutlet: UIButton!
+    @IBOutlet weak var startGameOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        selectCardsOutlet.layer.borderWidth = 2
+        selectCardsOutlet.layer.cornerRadius = 5
+        selectCardsOutlet.layer.borderColor = UIColor.white.cgColor
+        startGameOutlet.layer.borderWidth = 2
+        startGameOutlet.layer.cornerRadius = 5
+        startGameOutlet.layer.borderColor = UIColor.white.cgColor
         // Do any additional setup after loading the view.
     }
 

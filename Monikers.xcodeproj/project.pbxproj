@@ -61,7 +61,7 @@
 		2F35CECD210C0817004953C9 /* DraftCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCardView.swift; sourceTree = "<group>"; };
 		2F35CECF210E9EFB004953C9 /* DraftingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingVC.swift; sourceTree = "<group>"; };
 		2F35CED1210E9F1F004953C9 /* DraftingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingModel.swift; sourceTree = "<group>"; };
-		2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DraftOrPlayVC.swift; path = Monikers/DraftOrPlayVC.swift; sourceTree = "<group>"; };
+		2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftOrPlayVC.swift; sourceTree = "<group>"; };
 		2F5816372102732400D4D37C /* changeTeam.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = changeTeam.gif; sourceTree = "<group>"; };
 		2F79909C20F0025D0054DE3F /* Monikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monikers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F79909F20F0025D0054DE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 		2F79909320F0025D0054DE3F = {
 			isa = PBXGroup;
 			children = (
-				2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */,
 				2F79909E20F0025D0054DE3F /* Monikers */,
 				2F79909D20F0025D0054DE3F /* Products */,
 			);
@@ -135,6 +134,7 @@
 		2F79909E20F0025D0054DE3F /* Monikers */ = {
 			isa = PBXGroup;
 			children = (
+				2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */,
 				2F79909F20F0025D0054DE3F /* AppDelegate.swift */,
 				2F7990A620F0025E0054DE3F /* Assets.xcassets */,
 				2F5816372102732400D4D37C /* changeTeam.gif */,
