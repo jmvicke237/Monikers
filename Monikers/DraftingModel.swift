@@ -14,7 +14,7 @@ class DraftingModel {
     var currentDraftingArray = [String]()
     var currentNumberOfPlayers = 0
     var currentNumberOfCardsSelected = 0
-    let draftsize = 25
+    let draftsize = 10
     
     init() {
         importNamesFromFile()
