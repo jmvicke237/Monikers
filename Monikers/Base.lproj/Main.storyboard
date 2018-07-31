@@ -363,10 +363,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-cy-dLh">
-                                <rect key="frame" x="110" y="625" width="194" height="51"/>
+                                <rect key="frame" x="91" y="625" width="233" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <state key="normal" title="Select cards">
+                                <state key="normal" title="  Select cards  ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -387,6 +387,7 @@
                     </view>
                     <connections>
                         <outlet property="instructionsText" destination="84t-bB-oI6" id="dOV-IN-zu0"/>
+                        <outlet property="select" destination="bzb-cy-dLh" id="0Sr-zz-tpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDB-2F-6lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -604,41 +605,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ada-Ag-DEC">
-                                <rect key="frame" x="242" y="279" width="105" height="105"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="3dD-50-J5E"/>
-                                    <constraint firstAttribute="height" constant="105" id="lfV-8v-Vpo"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBZ-5u-ITT">
-                                <rect key="frame" x="242" y="409" width="105" height="105"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="tgM-YD-yHi"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Two" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDS-N7-JNh">
-                                <rect key="frame" x="49" y="433" width="167" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="3xB-fW-sax"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZK-dy-JMf">
-                                <rect key="frame" x="49" y="318" width="167" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Xub-9L-Aql"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-9N-5GA">
-                                <rect key="frame" x="164" y="616" width="86" height="51"/>
+                                <rect key="frame" x="155" y="616" width="105" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Sx3-Ku-hvd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <state key="normal" title="PLAY">
+                                <state key="normal" title=" PLAY ">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -646,52 +619,104 @@
                                     <segue destination="DKY-9k-QIb" kind="show" identifier="DraftInstructionsSegue" id="voj-nq-3Pn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Monikers!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-Y8-Z4C">
-                                <rect key="frame" x="61" y="45" width="217" height="103"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="zyo-OH-OdM"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split into two teams" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJb-RM-7pL">
+                                <rect key="frame" x="61" y="43" width="179" height="115"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split into two teams, please." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJb-RM-7pL">
-                                <rect key="frame" x="61" y="156" width="286" height="103"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="PkQ-Sy-VUG"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the images below to change mascots" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG5-Ht-nvi">
+                                <rect key="frame" x="61" y="166" width="313" height="136"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ada-Ag-DEC">
+                                <rect key="frame" x="254" y="351" width="106" height="105"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBZ-5u-ITT">
+                                <rect key="frame" x="254" y="481" width="106" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xBZ-5u-ITT" secondAttribute="height" multiplier="1:1" constant="1" id="3Cn-M6-omy"/>
+                                    <constraint firstAttribute="width" secondItem="xBZ-5u-ITT" secondAttribute="height" multiplier="1:1" constant="1" id="65n-T0-8Eb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZK-dy-JMf">
+                                <rect key="frame" x="61" y="391" width="173" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7e8-CG-NyD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjz-Xf-JIq">
+                                <rect key="frame" x="254" y="351" width="106" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qjz-Xf-JIq" secondAttribute="height" multiplier="1:1" constant="1" id="jfq-Ts-8r8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="teamOneButton:" destination="nIj-aA-0sy" eventType="touchUpInside" id="XwK-g5-zNY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L3-j7-gry">
+                                <rect key="frame" x="254" y="481" width="106" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4L3-j7-gry" secondAttribute="height" multiplier="1:1" constant="1" id="PFr-B2-LYo"/>
+                                    <constraint firstAttribute="height" constant="105" id="yeI-hB-CwO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="teamTwoButton:" destination="nIj-aA-0sy" eventType="touchUpInside" id="26k-ED-zIq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Two" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDS-N7-JNh">
+                                <rect key="frame" x="61" y="502" width="160" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="YdN-0c-Ysv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.066666666669999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ada-Ag-DEC" firstAttribute="top" secondItem="jJb-RM-7pL" secondAttribute="bottom" constant="20" id="04c-5P-wMC"/>
-                            <constraint firstItem="WZK-dy-JMf" firstAttribute="trailing" secondItem="lDS-N7-JNh" secondAttribute="trailing" id="9By-ph-1IB"/>
-                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="jJb-RM-7pL" secondAttribute="trailing" constant="67" id="ENv-Wj-T8T"/>
-                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="bottom" secondItem="BhJ-9N-5GA" secondAttribute="bottom" constant="69" id="ESy-K9-177"/>
-                            <constraint firstItem="ada-Ag-DEC" firstAttribute="trailing" secondItem="xBZ-5u-ITT" secondAttribute="trailing" id="GnF-Os-Uon"/>
-                            <constraint firstItem="ada-Ag-DEC" firstAttribute="leading" secondItem="xBZ-5u-ITT" secondAttribute="leading" id="NOl-Ox-GqH"/>
-                            <constraint firstItem="lDS-N7-JNh" firstAttribute="top" secondItem="WZK-dy-JMf" secondAttribute="bottom" constant="90" id="X3w-P7-jlU"/>
-                            <constraint firstItem="jJb-RM-7pL" firstAttribute="trailing" secondItem="ada-Ag-DEC" secondAttribute="trailing" id="arA-q1-ZUg"/>
-                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="mfk-Y8-Z4C" secondAttribute="trailing" constant="136" id="dpD-4H-X2S"/>
-                            <constraint firstItem="mfk-Y8-Z4C" firstAttribute="leading" secondItem="4Z5-v6-mpd" secondAttribute="leading" constant="61" id="gGQ-eF-Iyl"/>
-                            <constraint firstItem="jJb-RM-7pL" firstAttribute="top" secondItem="mfk-Y8-Z4C" secondAttribute="bottom" constant="8" symbolic="YES" id="gNv-Ew-50p"/>
-                            <constraint firstItem="BhJ-9N-5GA" firstAttribute="centerX" secondItem="hrm-X3-2IL" secondAttribute="centerX" id="gOA-EO-qCL"/>
-                            <constraint firstItem="ada-Ag-DEC" firstAttribute="leading" secondItem="WZK-dy-JMf" secondAttribute="trailing" constant="26" id="jmG-l6-8sm"/>
-                            <constraint firstItem="mfk-Y8-Z4C" firstAttribute="top" secondItem="4Z5-v6-mpd" secondAttribute="top" constant="25" id="kI8-4g-c5y"/>
-                            <constraint firstItem="WZK-dy-JMf" firstAttribute="leading" secondItem="4Z5-v6-mpd" secondAttribute="leading" constant="49" id="mjZ-cV-A1e"/>
-                            <constraint firstItem="WZK-dy-JMf" firstAttribute="leading" secondItem="lDS-N7-JNh" secondAttribute="leading" id="n4U-QN-P2J"/>
-                            <constraint firstItem="mfk-Y8-Z4C" firstAttribute="leading" secondItem="jJb-RM-7pL" secondAttribute="leading" id="nJL-Js-t5u"/>
-                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="top" secondItem="ada-Ag-DEC" secondAttribute="bottom" constant="25" id="tay-JG-qCw"/>
-                            <constraint firstItem="WZK-dy-JMf" firstAttribute="top" secondItem="jJb-RM-7pL" secondAttribute="bottom" constant="59" id="vYy-Xr-Ysr"/>
+                            <constraint firstItem="ada-Ag-DEC" firstAttribute="bottom" secondItem="qjz-Xf-JIq" secondAttribute="bottom" id="1K3-qH-Hax"/>
+                            <constraint firstItem="4L3-j7-gry" firstAttribute="top" secondItem="xBZ-5u-ITT" secondAttribute="top" id="1ZP-yv-vEi"/>
+                            <constraint firstItem="qjz-Xf-JIq" firstAttribute="top" secondItem="jJb-RM-7pL" secondAttribute="bottom" constant="193" id="2Ra-4B-7Lr"/>
+                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="leading" secondItem="4L3-j7-gry" secondAttribute="leading" id="3wc-C3-kHb"/>
+                            <constraint firstItem="qjz-Xf-JIq" firstAttribute="top" secondItem="ada-Ag-DEC" secondAttribute="top" id="4D5-Vr-X95"/>
+                            <constraint firstItem="jJb-RM-7pL" firstAttribute="top" secondItem="4Z5-v6-mpd" secondAttribute="top" constant="23" id="4o8-g1-CZU"/>
+                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="top" secondItem="ada-Ag-DEC" secondAttribute="bottom" constant="25" id="6TY-TL-T5y"/>
+                            <constraint firstItem="jJb-RM-7pL" firstAttribute="leading" secondItem="WZK-dy-JMf" secondAttribute="leading" id="AEA-zO-XAh"/>
+                            <constraint firstItem="MG5-Ht-nvi" firstAttribute="top" secondItem="jJb-RM-7pL" secondAttribute="bottom" constant="8" symbolic="YES" id="B6p-2b-T0M"/>
+                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="bottom" secondItem="4L3-j7-gry" secondAttribute="bottom" id="GtE-QU-v6r"/>
+                            <constraint firstItem="WZK-dy-JMf" firstAttribute="top" secondItem="jJb-RM-7pL" secondAttribute="bottom" constant="233" id="HNm-oR-PJf"/>
+                            <constraint firstItem="WZK-dy-JMf" firstAttribute="leading" secondItem="lDS-N7-JNh" secondAttribute="leading" id="Jms-2s-olR"/>
+                            <constraint firstItem="BhJ-9N-5GA" firstAttribute="top" secondItem="xBZ-5u-ITT" secondAttribute="bottom" constant="30" id="L77-lU-i9T"/>
+                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="MG5-Ht-nvi" secondAttribute="trailing" constant="40" id="Let-IA-J6d"/>
+                            <constraint firstItem="ada-Ag-DEC" firstAttribute="trailing" secondItem="xBZ-5u-ITT" secondAttribute="trailing" id="Mtr-TK-B9T"/>
+                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="ada-Ag-DEC" secondAttribute="trailing" constant="54" id="O0k-Td-XzK"/>
+                            <constraint firstItem="jJb-RM-7pL" firstAttribute="leading" secondItem="4Z5-v6-mpd" secondAttribute="leading" constant="61" id="OEj-Rb-JaN"/>
+                            <constraint firstItem="ada-Ag-DEC" firstAttribute="trailing" secondItem="qjz-Xf-JIq" secondAttribute="trailing" id="UOH-G3-9oz"/>
+                            <constraint firstItem="WZK-dy-JMf" firstAttribute="centerY" secondItem="ada-Ag-DEC" secondAttribute="centerY" id="UhM-p5-iwA"/>
+                            <constraint firstItem="MG5-Ht-nvi" firstAttribute="leading" secondItem="WZK-dy-JMf" secondAttribute="leading" id="WFl-TA-tr3"/>
+                            <constraint firstItem="lDS-N7-JNh" firstAttribute="top" secondItem="WZK-dy-JMf" secondAttribute="bottom" constant="86" id="chF-nx-kb6"/>
+                            <constraint firstItem="ada-Ag-DEC" firstAttribute="leading" secondItem="xBZ-5u-ITT" secondAttribute="leading" id="da5-gc-gLr"/>
+                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="jJb-RM-7pL" secondAttribute="trailing" constant="174" id="hEx-oG-XpT"/>
+                            <constraint firstItem="qjz-Xf-JIq" firstAttribute="leading" secondItem="WZK-dy-JMf" secondAttribute="trailing" constant="20" id="hKs-2w-RGV"/>
+                            <constraint firstItem="qjz-Xf-JIq" firstAttribute="leading" secondItem="ada-Ag-DEC" secondAttribute="leading" id="jJ9-KA-k21"/>
+                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="leading" secondItem="lDS-N7-JNh" secondAttribute="trailing" constant="33" id="jYE-Ao-1QT"/>
+                            <constraint firstItem="BhJ-9N-5GA" firstAttribute="centerX" secondItem="hrm-X3-2IL" secondAttribute="centerX" id="nDV-vX-OZ4"/>
+                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="bottom" secondItem="BhJ-9N-5GA" secondAttribute="bottom" constant="69" id="qY5-mm-YUu"/>
+                            <constraint firstItem="xBZ-5u-ITT" firstAttribute="trailing" secondItem="4L3-j7-gry" secondAttribute="trailing" id="rvC-JE-Cgt"/>
+                            <constraint firstItem="ada-Ag-DEC" firstAttribute="top" secondItem="MG5-Ht-nvi" secondAttribute="bottom" constant="49" id="zq4-rd-gTf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Z5-v6-mpd"/>
                     </view>
                     <connections>
+                        <outlet property="play" destination="BhJ-9N-5GA" id="hTs-e1-3MA"/>
                         <outlet property="teamOneGif" destination="ada-Ag-DEC" id="BJC-yH-T2K"/>
-                        <outlet property="teamOneLabel" destination="WZK-dy-JMf" id="31K-Ys-51H"/>
                         <outlet property="teamTwoGif" destination="xBZ-5u-ITT" id="Oge-cC-V44"/>
                     </connections>
                 </viewController>
