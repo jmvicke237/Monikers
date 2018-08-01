@@ -12,7 +12,7 @@ class EndGameVC: UIViewController {
 
     var teamOneName = ""
     var teamTwoName = ""
-    var teamOnePoints = 1000
+    var teamOnePoints = 0
     var teamTwoPoints = 0
     var winner = ""
     
@@ -34,16 +34,4 @@ class EndGameVC: UIViewController {
         playAgainOutlet.layer.cornerRadius = 5
         playAgainOutlet.layer.borderColor = UIColor.white.cgColor
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

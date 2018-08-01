@@ -28,14 +28,12 @@ protocol turnDelegate {
 class Monikers {
     let cardNumberMultiplier = 1
     var paused = false
-//    var roundOneGuesses = 0
     let teamOne: Team
     let teamTwo: Team
     var namesArray = [String]()
     var skipArray = [String]()
     var answeredArray = [String]()
     var undoStack = [String]()
-//    var numberOfPlayers = 0
     var winner = ""
     var kindOfUndo: KindOfUndo = .correct
     var roundScore = 0
@@ -80,7 +78,6 @@ class Monikers {
         currentTeam = teamOne
         currentRound = .roundOne
         namesArray = names
-        //importNamesFromFile()
     }
     
     func timerStart() {
@@ -105,18 +102,6 @@ class Monikers {
     }
     
     private func determineRound() { //Called when the timer hits 0
-//        if currentRound == .roundOne && answeredArray.count == cardNumberMultiplier * numberOfPlayers {
-//            roundOneGuesses = 0
-//            endOfRound = true
-//            namesArray.removeAll()
-//            namesArray = answeredArray
-//            answeredArray.removeAll()
-//            skipArray.removeAll()
-//            currentRound = .roundTwo
-//            determineNextTeam()
-//            endOfRound = false
-//            return
-//        }
         
         if namesArray.count == 0 && skipArray.count == 0 {
             endOfRound = true
@@ -203,13 +188,6 @@ class Monikers {
         kindOfUndo = .correct
         answeredArray.append(name)
         currentTeam.score += 1
-//        if currentRound == .roundOne {
-//            roundOneGuesses += 1
-//        }
-//        if roundOneGuesses == cardNumberMultiplier * numberOfPlayers {
-//            namesArray.removeAll()
-//            time = 0
-//        }
     }
     
     func wrongGuess(_ name: String) {
@@ -224,7 +202,6 @@ class Monikers {
             switch kindOfUndo {
             case .correct:
                 currentTeam.score -= 1
-//                roundOneGuesses -= 1
                 answeredArray.removeLast()
                 undoStack.removeAll()
                 break
@@ -247,19 +224,6 @@ class Monikers {
             return true
         }
     }
-    
-//    func importNamesFromFile() {
-//        let path = Bundle.main.path(forResource: "Names", ofType: "txt")
-//        let filemgr = FileManager.default
-//        if filemgr.fileExists(atPath: path!) {
-//            do {
-//                let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-//                namesArray = fullText.components(separatedBy: "\n")
-//                namesArray.remove(at: namesArray.count - 1)
-//            }
-//            catch { print("Can't read from file/file does not exist") }
-//        }
-//    }
 }
 
 extension Int {
