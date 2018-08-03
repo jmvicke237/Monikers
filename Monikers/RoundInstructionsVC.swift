@@ -63,14 +63,10 @@ class RoundInstructionsVC: UIViewController {
             rulesLabel.text = instructions
             switch currentTeam.name {
             case "fish", "doll", "blacula":
-                //                teamNameLabel.text = "Team two"
-                //                teamImage.loadGif(name: teamTwoName + "-play")
                 teamNameLabel.text = "Team one"
                 teamImage.loadGif(name: teamOneName + "-play")
                 break
             default:
-                //                teamNameLabel.text = "Team one"
-                //                teamImage.loadGif(name: teamOneName + "-play")
                 teamNameLabel.text = "Team two"
                 teamImage.loadGif(name: teamTwoName + "-play")
                 break
