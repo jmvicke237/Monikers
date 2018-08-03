@@ -51,7 +51,7 @@ class Monikers {
         }
     }
     
-    var time = 2 {
+    var time = 60 {
         didSet {
             timeIncrementDelegate?.timeDidChange()
         }
