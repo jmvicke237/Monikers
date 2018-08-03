@@ -188,6 +188,7 @@
                         <segue destination="oRb-uo-upw" kind="show" identifier="GameOverSegue" id="DAE-a6-Arm"/>
                         <segue destination="Fb7-1i-bh0" kind="show" identifier="GameToRoundInstructionsSegue" id="cM3-zB-2qm"/>
                         <segue destination="Pg9-b3-KZd" kind="show" identifier="PassThePhoneSegue" id="YHq-j8-rxG"/>
+                        <segue destination="czB-b4-WDe" kind="show" identifier="EndOfRoundSegue" id="ohP-dr-wU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,7 +198,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2571" y="148"/>
+            <point key="canvasLocation" x="2570" y="217"/>
         </scene>
         <!--Pass The PhoneVC-->
         <scene sceneID="sk4-Ws-NVc">
@@ -355,6 +356,21 @@
             </objects>
             <point key="canvasLocation" x="3549" y="148"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AOs-Ay-CWl">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="czB-b4-WDe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eNC-YB-fPi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AVD-bc-aFd" kind="relationship" relationship="rootViewController" id="sSh-ji-kFc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h24-AN-ojx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="-641"/>
+        </scene>
         <!--Round InstructionsVC-->
         <scene sceneID="WSQ-KT-Ix2">
             <objects>
@@ -364,19 +380,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team One's turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIH-Ij-xug">
-                                <rect key="frame" x="78" y="43" width="259" height="39"/>
+                                <rect key="frame" x="78" y="43" width="259" height="39.333333333333343"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83o-sj-BRv">
-                                <rect key="frame" x="120" y="349" width="174" height="39"/>
+                                <rect key="frame" x="120" y="349.33333333333331" width="174" height="38.666666666666686"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-9e-dWO">
-                                <rect key="frame" x="107" y="114" width="200" height="200"/>
+                                <rect key="frame" x="107" y="114.33333333333331" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="LzG-Z4-tiR"/>
                                     <constraint firstAttribute="width" secondItem="Si3-9e-dWO" secondAttribute="height" multiplier="1:1" id="tkW-eB-5I9"/>
@@ -428,7 +444,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcO-wj-Qur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2572" y="-612"/>
+            <point key="canvasLocation" x="4599" y="-642"/>
+        </scene>
+        <!--End Of RoundVC-->
+        <scene sceneID="Mr8-mb-9Jq">
+            <objects>
+                <viewController id="AVD-bc-aFd" customClass="EndOfRoundVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kbc-8r-NfT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End of Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-kQ-sdv">
+                                <rect key="frame" x="98" y="59" width="219" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spb-i1-PYt">
+                                <rect key="frame" x="194" y="193" width="154" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-tD-1ud">
+                                <rect key="frame" x="194" y="386" width="145" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-vH-8qS">
+                                <rect key="frame" x="61" y="170" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-eK-dKb">
+                                <rect key="frame" x="61" y="359" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-SA-7BH">
+                                <rect key="frame" x="108" y="656" width="198" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next round">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fb7-1i-bh0" kind="show" identifier="NextRoundSegue" id="630-gl-5Vg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hcF-iX-NBb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="81d-nt-PtN"/>
+                    <connections>
+                        <outlet property="teamOneImage" destination="uDh-vH-8qS" id="uSK-vZ-PXI"/>
+                        <outlet property="teamOneLabel" destination="spb-i1-PYt" id="vMl-vb-BmG"/>
+                        <outlet property="teamTwoImage" destination="9Je-eK-dKb" id="VfR-UM-IMr"/>
+                        <outlet property="teamTwoLabel" destination="6Ev-tD-1ud" id="vx2-uC-tOa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-sE-ZhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2351" y="-642"/>
         </scene>
         <!--Draft Or PlayVC-->
         <scene sceneID="lPN-NH-aoz">
@@ -1006,6 +1089,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kgQ-Tv-Ylt"/>
-        <segue reference="cM3-zB-2qm"/>
+        <segue reference="630-gl-5Vg"/>
     </inferredMetricsTieBreakers>
 </document>

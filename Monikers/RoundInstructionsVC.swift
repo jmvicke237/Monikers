@@ -16,7 +16,8 @@ class RoundInstructionsVC: UIViewController {
     @IBOutlet weak var rulesLabel: UILabel!
     @IBAction func startButton(_ sender: UIButton) {
         if currentRound != .roundOne {
-            dismiss(animated: true, completion: nil)
+            //dismiss(animated: true, completion: nil)
+            self.navigationController?.dismiss(animated: true, completion: nil)
         } else {
             self.performSegue(withIdentifier: "InstructionsToGameSegue", sender:self)
         }

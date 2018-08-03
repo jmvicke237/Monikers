@@ -109,7 +109,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     private func updateRound() {
         if game.currentRound != .gameOver {
-            self.performSegue(withIdentifier: "GameToRoundInstructionsSegue", sender:self)
+            self.performSegue(withIdentifier: "EndOfRoundSegue", sender:self)
             cardsRemaining.text = "\(game.namesArray.count)"
             roundLabel.text = game.currentRound.rawValue
         } else {
@@ -253,6 +253,19 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 destinationVC.currentRound = game.currentRound
                 destinationVC.currentTeam = game.currentTeam
                 print(game.currentTeam.name)
+            }
+        }
+        
+        if segue.identifier == "EndOfRoundSegue" {
+            if let destinationVC = segue.destination as? UINavigationController {
+                if let topVC = destinationVC.topViewController as? EndOfRoundVC {
+                    topVC.teamOneName = game.teamOne.name
+                    topVC.teamTwoName = game.teamTwo.name
+                    topVC.currentRound = game.currentRound
+                    topVC.currentTeam = game.currentTeam
+                    topVC.teamOnePoints = game.teamOne.score
+                    topVC.teamTwoPoints = game.teamTwo.score
+                }
             }
         }
     }

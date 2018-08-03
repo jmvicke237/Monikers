@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		2F07455820FC418300CD8979 /* MonikerCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07455720FC418300CD8979 /* MonikerCardBackView.swift */; };
 		2F0EE31620FBBC2600B3C5FB /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */; };
+		2F31330B2114B947008CF028 /* EndOfRoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F31330A2114B947008CF028 /* EndOfRoundVC.swift */; };
+		2F31330D2114C0F4008CF028 /* changeTeam.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F31330C2114C0F4008CF028 /* changeTeam.gif */; };
 		2F32831E20F3E9DE00C99669 /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */; };
 		2F35CECE210C0817004953C9 /* DraftCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CECD210C0817004953C9 /* DraftCardView.swift */; };
 		2F35CED0210E9EFB004953C9 /* DraftingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CECF210E9EFB004953C9 /* DraftingVC.swift */; };
 		2F35CED2210E9F1F004953C9 /* DraftingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED1210E9F1F004953C9 /* DraftingModel.swift */; };
 		2F35CED4210F658A004953C9 /* DraftOrPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */; };
-		2F5816382102732400D4D37C /* changeTeam.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F5816372102732400D4D37C /* changeTeam.gif */; };
 		2F7990A020F0025D0054DE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79909F20F0025D0054DE3F /* AppDelegate.swift */; };
 		2F7990A220F0025D0054DE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7990A120F0025D0054DE3F /* ViewController.swift */; };
 		2F7990A520F0025D0054DE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7990A320F0025D0054DE3F /* Main.storyboard */; };
@@ -61,12 +62,13 @@
 /* Begin PBXFileReference section */
 		2F07455720FC418300CD8979 /* MonikerCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonikerCardBackView.swift; sourceTree = "<group>"; };
 		2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		2F31330A2114B947008CF028 /* EndOfRoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfRoundVC.swift; sourceTree = "<group>"; };
+		2F31330C2114C0F4008CF028 /* changeTeam.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = changeTeam.gif; sourceTree = "<group>"; };
 		2F32831D20F3E9DE00C99669 /* TeamSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
 		2F35CECD210C0817004953C9 /* DraftCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftCardView.swift; sourceTree = "<group>"; };
 		2F35CECF210E9EFB004953C9 /* DraftingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingVC.swift; sourceTree = "<group>"; };
 		2F35CED1210E9F1F004953C9 /* DraftingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingModel.swift; sourceTree = "<group>"; };
 		2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftOrPlayVC.swift; sourceTree = "<group>"; };
-		2F5816372102732400D4D37C /* changeTeam.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = changeTeam.gif; sourceTree = "<group>"; };
 		2F79909C20F0025D0054DE3F /* Monikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monikers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F79909F20F0025D0054DE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7990A120F0025D0054DE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 			children = (
 				2F79909F20F0025D0054DE3F /* AppDelegate.swift */,
 				2F7990A620F0025E0054DE3F /* Assets.xcassets */,
-				2F5816372102732400D4D37C /* changeTeam.gif */,
+				2F31330C2114C0F4008CF028 /* changeTeam.gif */,
 				2F35CECD210C0817004953C9 /* DraftCardView.swift */,
 				2F35CED1210E9F1F004953C9 /* DraftingModel.swift */,
 				2F35CECF210E9EFB004953C9 /* DraftingVC.swift */,
@@ -156,6 +158,7 @@
 				2FE432F120FA578E004B178F /* kindOfUndo.swift */,
 				2F7990A820F0025E0054DE3F /* LaunchScreen.storyboard */,
 				2F7990A320F0025D0054DE3F /* Main.storyboard */,
+				2F31330A2114B947008CF028 /* EndOfRoundVC.swift */,
 				2F7F4463211363A000C8B76F /* MenuVC.swift */,
 				2F07455720FC418300CD8979 /* MonikerCardBackView.swift */,
 				2F81E03D20F1ABD1004E4DDF /* Monikers.swift */,
@@ -336,6 +339,7 @@
 				2FE4331420FA672E004B178F /* schrodinger-play.gif in Resources */,
 				2FE432FA20FA64A2004B178F /* twins-play.gif in Resources */,
 				2FE4332B20FA6813004B178F /* fish-select.gif in Resources */,
+				2F31330D2114C0F4008CF028 /* changeTeam.gif in Resources */,
 				2F7990A720F0025E0054DE3F /* Assets.xcassets in Resources */,
 				2FE4330120FA6525004B178F /* twins-win.gif in Resources */,
 				2F7990A520F0025D0054DE3F /* Main.storyboard in Resources */,
@@ -345,7 +349,6 @@
 				2FE432FC20FA64DA004B178F /* twins-select.gif in Resources */,
 				2FE4332320FA67E0004B178F /* doll-select.gif in Resources */,
 				2FE4332420FA67E0004B178F /* doll-win.gif in Resources */,
-				2F5816382102732400D4D37C /* changeTeam.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +375,7 @@
 				2F7990B820F0064D0054DE3F /* MonikersCardView.swift in Sources */,
 				2FB4B6D72113B64C0006B9D4 /* PassThePhoneVC.swift in Sources */,
 				2F32831E20F3E9DE00C99669 /* TeamSelectViewController.swift in Sources */,
+				2F31330B2114B947008CF028 /* EndOfRoundVC.swift in Sources */,
 				2FD0124C210BAB44007893AE /* InstructionsVC.swift in Sources */,
 				2FE432EE20FA49C7004B178F /* Swift+GIF.swift in Sources */,
 				2F35CED2210E9F1F004953C9 /* DraftingModel.swift in Sources */,

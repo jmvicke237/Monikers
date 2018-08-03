@@ -38,7 +38,6 @@ class DraftOrPlayVC: UIViewController {
     }
     
     @IBAction func startButton(_ sender: UIButton) {
-        print("\(namesForPlayArray)")
     }
     
     
