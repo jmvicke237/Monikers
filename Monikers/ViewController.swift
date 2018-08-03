@@ -29,7 +29,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     lazy var game = Monikers(teamOne: teamOneName, teamTwo: teamTwoName, namesArray)
     var namesArray = [String]()
     let selection = UISelectionFeedbackGenerator()
-//    var numberOfPlayers = 0
     var teamOneName = ""
     var teamTwoName = ""
     var paused = false
@@ -59,12 +58,11 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         currentTeamGIF.loadGif(name: teamOneName + "-play")
         roundLabel.text = game.currentRound.rawValue
         timerLabel.text = ("\(game.time)")
-//        game.numberOfPlayers = numberOfPlayers
         mainCard.alpha = 0
         mainCard.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
         changeTeamGIF.isHidden = true
-        cardsRemaining.text = "\(namesArray.count)"//"\((game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses)"
+        cardsRemaining.text = "\(namesArray.count)"
         startGameOutlet.layer.borderWidth = 2
         startGameOutlet.layer.cornerRadius = 5
         startGameOutlet.layer.borderColor = UIColor.white.cgColor
@@ -110,40 +108,37 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateRound() {
-        //mainCard.alpha = 0
-        cardsRemaining.text = "\(game.namesArray.count)" //This is very bad coding. It should all be done through updateRemainingCards()
-        roundLabel.text = game.currentRound.rawValue
-        nameLabel.text = "End of Round! \n Pass the phone and begin \(game.currentRound.rawValue)!"
-        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-        UIView.animate(withDuration: 0.3, animations: {
-            self.mainCard.alpha = 1
-        })
-        changeTeamGIF.loadGif(name: "changeTeam")
-        if changeTeamGIF.isHidden{
-            changeTeamGIF.isHidden = false
-        }
-        
-        if game.currentRound == .gameOver {
+        if game.currentRound != .gameOver {
+            self.performSegue(withIdentifier: "GameToRoundInstructionsSegue", sender:self)
+            cardsRemaining.text = "\(game.namesArray.count)"
+            roundLabel.text = game.currentRound.rawValue
+        } else {
             self.performSegue(withIdentifier: "GameOverSegue", sender:self)
         }
+        
+//        nameLabel.text = "End of Round! \n Pass the phone and begin \(game.currentRound.rawValue)!"
+//        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+//        UIView.animate(withDuration: 0.3, animations: {
+//            self.mainCard.alpha = 1
+//        })
+//        changeTeamGIF.loadGif(name: "changeTeam")
+//        if changeTeamGIF.isHidden{
+//            changeTeamGIF.isHidden = false
+//        }
+
     }
     
     private func updateTurnChangeInstructions() {
+        game.namesArray.append(nameLabel.text!)
+        UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.mainCard.alpha = 0
+        })
+        self.performSegue(withIdentifier: "PassThePhoneSegue", sender:self)
         cardsRemaining.text = "\(game.namesArray.count)"
-        nameLabel.text = "End of Turn! \n Pass the phone!"
     }
     
     private func updateTeam() {
-        //mainCard.alpha = 0
-        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-        UIView.animate(withDuration: 0.3, animations: {
-            self.mainCard.alpha = 1
-        })
-        changeTeamGIF.loadGif(name: "changeTeam")
-        if changeTeamGIF.isHidden{
-            changeTeamGIF.isHidden = false
-        }
-        
         currentTeamGIF.loadGif(name: game.currentTeam.name + "-play")
     }
 
@@ -188,9 +183,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                         card.transform = CGAffineTransform.identity
                         self.game.wrongGuess(self.nameLabel.text!)
                         self.drawNewCard()
-//                        if self.game.currentRound != .roundOne {
-                            self.updateCardsRemaining()
-//                        }
+                        self.updateCardsRemaining()
                         if self.nameLabel.text != nil {
                             UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
                             UIView.animate(withDuration: 0.3, animations: {
@@ -231,12 +224,7 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateCardsRemaining() {
-//        if game.currentRound != .roundOne {
             cardsRemaining.text = "\(game.namesArray.count + 1)"
-//        } else {
-//            let cardsLeftRoundOne = (game.cardNumberMultiplier * game.numberOfPlayers) - game.roundOneGuesses
-//            cardsRemaining.text = "\(cardsLeftRoundOne)"
-//        }
     }
     
     @IBAction func undoButton(_ sender: UIButton) {
@@ -264,6 +252,15 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
                 destinationVC.teamOnePoints = game.teamOne.score
                 destinationVC.teamTwoPoints = game.teamTwo.score
                 destinationVC.winner = game.winner
+            }
+        }
+        if segue.identifier == "GameToRoundInstructionsSegue" {
+            if let destinationVC = segue.destination as? RoundInstructionsVC {
+                destinationVC.teamOneName = game.teamOne.name
+                destinationVC.teamTwoName = game.teamTwo.name
+                destinationVC.currentRound = game.currentRound
+                destinationVC.currentTeam = game.currentTeam
+                print(game.currentTeam.name)
             }
         }
     }

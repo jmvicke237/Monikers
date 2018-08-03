@@ -50,6 +50,15 @@ class DraftOrPlayVC: UIViewController {
                 destinationVC.teamTwoName = teamTwoName
             }
         }
+        
+        if segue.identifier == "DraftToRoundSegue" {
+            if let destinationVC = segue.destination as? RoundInstructionsVC {
+                destinationVC.namesArray = namesForPlayArray
+                destinationVC.teamOneName = teamOneName
+                destinationVC.teamTwoName = teamTwoName
+                destinationVC.currentTeam.name = teamOneName
+            }
+        }
     }
     
     

@@ -10,6 +10,9 @@ import UIKit
 
 class InstructionsVC: UIViewController {
 
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var select: UIButton!
     var teamOneName = ""
     var teamTwoName = ""

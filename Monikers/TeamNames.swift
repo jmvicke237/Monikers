@@ -9,6 +9,6 @@
 import Foundation
 
 enum TeamName: String {
-    case TeamOne = "😹"
-    case TeamTwo = "🍆"
+    case TeamOne = "Team one"
+    case TeamTwo = "Team two"
 }
