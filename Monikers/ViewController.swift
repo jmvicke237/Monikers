@@ -115,17 +115,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         } else {
             self.performSegue(withIdentifier: "GameOverSegue", sender:self)
         }
-        
-//        nameLabel.text = "End of Round! \n Pass the phone and begin \(game.currentRound.rawValue)!"
-//        UIView.transition(with: self.mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.mainCard.alpha = 1
-//        })
-//        changeTeamGIF.loadGif(name: "changeTeam")
-//        if changeTeamGIF.isHidden{
-//            changeTeamGIF.isHidden = false
-//        }
-
     }
     
     private func updateTurnChangeInstructions() {

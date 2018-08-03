@@ -107,7 +107,7 @@ class Monikers {
             endOfRound = true
             namesArray = answeredArray
             answeredArray.removeAll()
-            
+            determineNextTeam()
             switch currentRound {
             case .roundOne:
                 currentRound = .roundTwo
@@ -126,7 +126,7 @@ class Monikers {
                 break
             default: break
             }
-            determineNextTeam()
+//            determineNextTeam()
             endOfRound = false
             return
         } else {
