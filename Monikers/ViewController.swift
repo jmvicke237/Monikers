@@ -129,7 +129,10 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     }
     
     private func updateTurnChangeInstructions() {
-        game.namesArray.append(nameLabel.text!)
+        if let tempname = nameLabel.text {
+            game.namesArray.append(tempname)
+        }
+        
         UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         UIView.animate(withDuration: 0.3, animations: {
             self.mainCard.alpha = 0
