@@ -10,6 +10,7 @@ import UIKit
 
 class RoundInstructionsVC: UIViewController {
 
+    @IBOutlet weak var startButtonOutlet: UIButton!
     @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var teamImage: UIImageView!
     @IBOutlet weak var roundLabel: UILabel!
@@ -73,7 +74,9 @@ class RoundInstructionsVC: UIViewController {
                 break
             }
         }
-        
+        startButtonOutlet.layer.borderWidth = 2
+        startButtonOutlet.layer.cornerRadius = 5
+        startButtonOutlet.layer.borderColor = UIColor.white.cgColor
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

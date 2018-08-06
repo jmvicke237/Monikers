@@ -14,6 +14,7 @@ class EndOfRoundVC: UIViewController {
     @IBOutlet weak var teamTwoImage: UIImageView!
     @IBOutlet weak var teamOneLabel: UILabel!
     @IBOutlet weak var teamTwoLabel: UILabel!
+    @IBOutlet weak var nextButtonOutlet: UIButton!
     
     
     
@@ -25,12 +26,16 @@ class EndOfRoundVC: UIViewController {
     var teamTwoName = ""
     var teamOnePoints = 0
     var teamTwoPoints = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         teamOneImage.loadGif(name: teamOneName + "-select")
         teamTwoImage.loadGif(name: teamTwoName + "-select")
         teamOneLabel.text = "\(teamOnePoints) points"
         teamTwoLabel.text = "\(teamTwoPoints) points"
+        nextButtonOutlet.layer.borderWidth = 2
+        nextButtonOutlet.layer.cornerRadius = 5
+        nextButtonOutlet.layer.borderColor = UIColor.white.cgColor
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

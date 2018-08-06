@@ -14,28 +14,13 @@ class PassThePhoneVC: UIViewController {
     @IBAction func startButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var startButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gifImage.loadGif(name: "changeTeam")
-
-        // Do any additional setup after loading the view.
+        startButtonOutlet.layer.borderWidth = 2
+        startButtonOutlet.layer.cornerRadius = 5
+        startButtonOutlet.layer.borderColor = UIColor.white.cgColor
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

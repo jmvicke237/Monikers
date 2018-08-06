@@ -10,13 +10,16 @@ import UIKit
 
 class NewGameVC: UIViewController {
 
+    @IBOutlet weak var doneButtonOutlet: UIButton!
     @IBAction func backButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doneButtonOutlet.layer.borderWidth = 2
+        doneButtonOutlet.layer.cornerRadius = 5
+        doneButtonOutlet.layer.borderColor = UIColor.white.cgColor
     }
 
 }

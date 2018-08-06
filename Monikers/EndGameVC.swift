@@ -27,8 +27,8 @@ class EndGameVC: UIViewController {
         super.viewDidLoad()
         teamOneGIF.loadGif(name: teamOneName + "-select")
         teamTwoGIF.loadGif(name: teamTwoName + "-select")
-        teamOneScoreLabel.text = "\(teamOnePoints)"
-        teamTwoScoreLabel.text = "\(teamTwoPoints)"
+        teamOneScoreLabel.text = "\(teamOnePoints) points"
+        teamTwoScoreLabel.text = "\(teamTwoPoints) points"
         winnerGIF.loadGif(name: winner + "-win")
         playAgainOutlet.layer.borderWidth = 2
         playAgainOutlet.layer.cornerRadius = 5

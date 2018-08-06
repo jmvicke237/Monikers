@@ -209,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-vL-lYI">
-                                <rect key="frame" x="107" y="307" width="200" height="200"/>
+                                <rect key="frame" x="94.666666666666686" y="307" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1xZ-OD-Yor"/>
                                     <constraint firstAttribute="width" secondItem="XMg-vL-lYI" secondAttribute="height" multiplier="1:1" id="2OS-NJ-Pz0"/>
@@ -224,12 +224,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hip-3x-LbE">
-                                <rect key="frame" x="107" y="589" width="201" height="63"/>
+                                <rect key="frame" x="94.666666666666686" y="589" width="226" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="FTc-Y0-CCL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
-                                <state key="normal" title="Start turn">
+                                <state key="normal" title=" Start turn ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -249,6 +249,7 @@
                     </view>
                     <connections>
                         <outlet property="gifImage" destination="XMg-vL-lYI" id="Xg7-A5-RpJ"/>
+                        <outlet property="startButtonOutlet" destination="hip-3x-LbE" id="B0k-tH-Yn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iY6-1w-J5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,11 +265,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-vD-XdW">
-                                <rect key="frame" x="116" y="617" width="182" height="60"/>
+                                <rect key="frame" x="87.666666666666686" y="617" width="239" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8AQ-0H-rl5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Play again ">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -400,12 +401,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKa-WX-1aQ">
-                                <rect key="frame" x="107" y="653" width="201" height="63"/>
+                                <rect key="frame" x="107" y="653" width="226" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Sn5-D8-7FU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
-                                <state key="normal" title="Start turn">
+                                <state key="normal" title=" Start turn ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -437,6 +438,7 @@
                     <connections>
                         <outlet property="roundLabel" destination="83o-sj-BRv" id="j08-8k-yix"/>
                         <outlet property="rulesLabel" destination="Mfq-Ab-ON7" id="C2W-44-P7i"/>
+                        <outlet property="startButtonOutlet" destination="mKa-WX-1aQ" id="lnm-HR-edk"/>
                         <outlet property="teamImage" destination="Si3-9e-dWO" id="z0n-Av-NiR"/>
                         <outlet property="teamNameLabel" destination="EIH-Ij-xug" id="fKR-iU-qdQ"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="InstructionsToGameSegue" id="kYd-aR-2ND"/>
@@ -503,6 +505,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="81d-nt-PtN"/>
                     <connections>
+                        <outlet property="nextButtonOutlet" destination="RYb-SA-7BH" id="PvS-Jx-pTs"/>
                         <outlet property="teamOneImage" destination="uDh-vH-8qS" id="uSK-vZ-PXI"/>
                         <outlet property="teamOneLabel" destination="spb-i1-PYt" id="vMl-vb-BmG"/>
                         <outlet property="teamTwoImage" destination="9Je-eK-dKb" id="VfR-UM-IMr"/>
@@ -964,6 +967,9 @@
                         <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9Io-A4-NtV"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButtonOutlet" destination="OeJ-qz-zyP" id="5tP-35-cX7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2H-q2-eqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1085,9 +1091,10 @@
     <resources>
         <image name="ThumpDown" width="168" height="160"/>
         <image name="cardsRemainingIcon" width="204" height="317"/>
-        <image name="changeTeam.gif" width="200" height="112"/>
+        <image name="changeTeam.gif" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="kYd-aR-2ND"/>
         <segue reference="kgQ-Tv-Ylt"/>
         <segue reference="630-gl-5Vg"/>
     </inferredMetricsTieBreakers>
