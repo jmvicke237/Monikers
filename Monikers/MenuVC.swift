@@ -13,7 +13,6 @@ class MenuVC: UIViewController {
     @IBOutlet weak var settingsOUtlet: UIButton!
     @IBOutlet weak var newGameOutlet: UIButton!
     @IBOutlet weak var howToPlayOutlet: UIButton!
-    @IBOutlet weak var mainCardOutlet: DraftCardView!
     @IBOutlet weak var cardBackOutlet: MonikerCardBackView!
     
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ class MenuVC: UIViewController {
         border(settingsOUtlet)
         border(newGameOutlet)
         border(howToPlayOutlet)
-        mainCardOutlet.alpha = 0
         cardBackOutlet.alpha = 1
     }
     

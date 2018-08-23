@@ -30,13 +30,18 @@ class DraftingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainCard.alpha = 0
-        mainCard.center = self.view.center
         cardBackView.alpha = 1
-        cardBackView.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61
+    }
+
+    override func viewDidLayoutSubviews() {
+        cardBackView.center = view.center
+        mainCard.center = view.center
+        print("!!!!!!")
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
         mainCardLabel.text = draft.drawFromCurrentDraftingArray()
         UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
         UIView.animate(withDuration: 0.3, animations: {
@@ -93,6 +98,8 @@ class DraftingVC: UIViewController {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 }, completion: {(finished:Bool) in card.center = self.view.center
+                    print(card.center)
+                    print(self.view.frame.height)
                     self.thumbImageView.alpha = 0
                     card.transform = CGAffineTransform.identity
                     self.cardRemainingImage[self.draft.currentNumberOfCardsSelected].image = UIImage(named: "cardsRemainingWhiteIcon")

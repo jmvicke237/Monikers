@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fyE-Zs-GS2">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,27 +22,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q2-VG-1XM">
-                                <rect key="frame" x="186" y="70" width="43.666666666666657" height="38.666666666666657"/>
+                                <rect key="frame" x="166" y="30" width="44" height="39"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-Fk-ZaE">
-                                <rect key="frame" x="159" y="598" width="97" height="69"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title=" Start "/>
-                                <connections>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vvz-id-OrM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07J-fW-JZT">
-                                <rect key="frame" x="296" y="683" width="48" height="33"/>
+                                <rect key="frame" x="327" y="634" width="48" height="33"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reset"/>
@@ -52,9 +42,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-gU-eIJ">
-                                <rect key="frame" x="20" y="610" width="30" height="45"/>
+                                <rect key="frame" x="40" y="573" width="30" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="igD-Ys-WUi"/>
+                                    <constraint firstAttribute="height" constant="51" id="O8l-3w-dwF"/>
+                                    <constraint firstAttribute="width" constant="30" id="be1-Pr-5zf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,13 +55,18 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-gg-hKd">
-                                <rect key="frame" x="38" y="39" width="100" height="100"/>
+                                <rect key="frame" x="30" y="30" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dwC-gg-hKd" secondAttribute="height" multiplier="1:1" id="qb5-Vf-a5Y"/>
+                                    <constraint firstAttribute="width" constant="100" id="9As-Ch-jhA"/>
+                                    <constraint firstAttribute="height" constant="100" id="p3p-ev-MIc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ7-RR-dr0">
-                                <rect key="frame" x="304" y="608" width="30" height="51"/>
+                                <rect key="frame" x="305" y="573" width="30" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Ilv-p1-34I"/>
+                                    <constraint firstAttribute="height" constant="51" id="l47-96-gqs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="II"/>
@@ -78,41 +74,76 @@
                                     <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1Y-bS-ktJ"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBZ-0e-Agd" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="158" width="254" height="420"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
+                                <rect key="frame" x="245" y="30" width="100" height="39"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="vEO-NR-YMZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBZ-0e-Agd" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
+                                <rect key="frame" x="60" y="146" width="254" height="395"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="254" id="8Q0-CG-yxv"/>
-                                    <constraint firstAttribute="height" constant="420" id="TeB-P1-o0S"/>
-                                </constraints>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTs-a3-VTm" userLabel="cardsRemainingView">
-                                <rect key="frame" x="80" y="598" width="58" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owt-Ga-Te9">
+                                <rect key="frame" x="104" y="549" width="168" height="98"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6pT-D5-EM6">
-                                        <rect key="frame" x="10" y="7" width="40" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Pe-dF-3zL">
-                                        <rect key="frame" x="4" y="3" width="40" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQq-dk-zMT">
-                                        <rect key="frame" x="8" y="20" width="32" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTs-a3-VTm" userLabel="cardsRemainingView">
+                                        <rect key="frame" x="8" y="14" width="58" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6pT-D5-EM6">
+                                                <rect key="frame" x="10" y="7" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardsRemainingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Pe-dF-3zL">
+                                                <rect key="frame" x="4" y="3" width="40" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQq-dk-zMT">
+                                                <rect key="frame" x="8" y="20" width="32" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="aLe-LK-aLr"/>
+                                            <constraint firstAttribute="height" constant="70" id="e9L-lr-CFM"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1x-Fk-ZaE">
+                                        <rect key="frame" x="63" y="23.5" width="97" height="51"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title=" Start "/>
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vvz-id-OrM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YTs-a3-VTm" firstAttribute="leading" secondItem="owt-Ga-Te9" secondAttribute="leading" constant="8" id="2Gl-tv-N9d"/>
+                                    <constraint firstAttribute="trailing" secondItem="n1x-Fk-ZaE" secondAttribute="trailing" constant="8" id="CmJ-RS-f69"/>
+                                    <constraint firstAttribute="height" constant="98" id="OMe-Zu-XoA"/>
+                                    <constraint firstItem="YTs-a3-VTm" firstAttribute="centerY" secondItem="owt-Ga-Te9" secondAttribute="centerY" id="fEs-LY-jFa"/>
+                                    <constraint firstAttribute="width" constant="168" id="kVb-98-5qo"/>
+                                    <constraint firstItem="n1x-Fk-ZaE" firstAttribute="centerY" secondItem="owt-Ga-Te9" secondAttribute="centerY" id="trT-rl-F49"/>
+                                </constraints>
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fl-ri-jhV" customClass="MonikersCardView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="158" width="254" height="420"/>
+                                <rect key="frame" x="60" y="146" width="254" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIB-ac-wbe">
@@ -126,10 +157,6 @@
                                         <rect key="frame" x="41" y="106" width="168" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="changeTeam.gif" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-cf-DYa">
-                                        <rect key="frame" x="8" y="274" width="238" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,43 +165,28 @@
                                     <outletCollection property="gestureRecognizers" destination="ekG-iU-ILE" appends="YES" id="rRZ-T3-mag"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak9-zF-4W3">
-                                <rect key="frame" x="260" y="70" width="104.33333333333331" height="38.666666666666657"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.066666666669999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="07J-fW-JZT" secondAttribute="bottom" constant="20" symbolic="YES" id="0eP-h2-NIT"/>
-                            <constraint firstItem="PBZ-0e-Agd" firstAttribute="top" secondItem="dwC-gg-hKd" secondAttribute="bottom" constant="19" id="1tO-tI-rco"/>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="4I6-84-zMt"/>
-                            <constraint firstAttribute="centerX" secondItem="PBZ-0e-Agd" secondAttribute="centerX" id="Bni-pF-Khy"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="0.5" id="IBL-f7-M1K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ak9-zF-4W3" secondAttribute="trailing" constant="42" id="K5e-PY-3jL"/>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="Ky0-KS-RJE"/>
-                            <constraint firstItem="ak9-zF-4W3" firstAttribute="leading" secondItem="dwC-gg-hKd" secondAttribute="trailing" constant="122" id="SXj-qd-C6J"/>
-                            <constraint firstItem="n1x-Fk-ZaE" firstAttribute="top" relation="lessThanOrEqual" secondItem="PBZ-0e-Agd" secondAttribute="bottom" constant="20" id="UjR-zS-DQa"/>
-                            <constraint firstItem="n1x-Fk-ZaE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bZ1-Jk-oTh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="n1x-Fk-ZaE" secondAttribute="bottom" constant="69" id="cJS-Pv-fs9"/>
-                            <constraint firstItem="LJ7-RR-dr0" firstAttribute="centerY" secondItem="n1x-Fk-ZaE" secondAttribute="centerY" constant="1" id="e7j-bK-4Il"/>
-                            <constraint firstItem="9nZ-gU-eIJ" firstAttribute="centerY" secondItem="n1x-Fk-ZaE" secondAttribute="centerY" id="emD-o6-jqZ"/>
-                            <constraint firstItem="07J-fW-JZT" firstAttribute="centerX" secondItem="ak9-zF-4W3" secondAttribute="centerX" constant="7.8333333333333712" id="et3-XR-xMh"/>
-                            <constraint firstItem="PBZ-0e-Agd" firstAttribute="top" secondItem="ak9-zF-4W3" secondAttribute="bottom" constant="49.333333333333329" id="hKd-Qg-AI2"/>
-                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="jdP-0m-tn7"/>
-                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="top" secondItem="ak9-zF-4W3" secondAttribute="top" id="vRG-n4-4J4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJ7-RR-dr0" secondAttribute="trailing" constant="80" id="w6L-VB-JpR"/>
-                            <constraint firstItem="ak9-zF-4W3" firstAttribute="trailing" secondItem="LJ7-RR-dr0" secondAttribute="trailing" constant="30.333333333333314" id="wa1-Cn-H4j"/>
-                            <constraint firstItem="PBZ-0e-Agd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xW1-a7-eAw"/>
-                            <constraint firstItem="9nZ-gU-eIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zdQ-zt-7o5"/>
+                            <constraint firstItem="ak9-zF-4W3" firstAttribute="top" secondItem="2Q2-VG-1XM" secondAttribute="top" id="1Oa-ev-kEM"/>
+                            <constraint firstItem="LJ7-RR-dr0" firstAttribute="centerY" secondItem="owt-Ga-Te9" secondAttribute="centerY" id="38S-Jj-yMQ"/>
+                            <constraint firstItem="9nZ-gU-eIJ" firstAttribute="centerY" secondItem="owt-Ga-Te9" secondAttribute="centerY" id="TZv-PH-IwL"/>
+                            <constraint firstItem="9nZ-gU-eIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Tbm-aD-bvm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="owt-Ga-Te9" secondAttribute="bottom" constant="20" id="WGe-S4-4N7"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XhR-e6-4UK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07J-fW-JZT" secondAttribute="trailing" id="mQo-g2-cGi"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nqa-nP-fA8"/>
+                            <constraint firstItem="2Q2-VG-1XM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="reQ-O8-IAK"/>
+                            <constraint firstItem="07J-fW-JZT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tAV-hx-Jg3"/>
+                            <constraint firstItem="dwC-gg-hKd" firstAttribute="top" secondItem="2Q2-VG-1XM" secondAttribute="top" id="x3g-NH-bGi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJ7-RR-dr0" secondAttribute="trailing" constant="40" id="x5K-do-ThT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ak9-zF-4W3" secondAttribute="trailing" constant="30" id="yAE-67-gu6"/>
+                            <constraint firstItem="owt-Ga-Te9" firstAttribute="centerX" secondItem="2Q2-VG-1XM" secondAttribute="centerX" id="ykg-Rj-44L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cardsRemaining" destination="XQq-dk-zMT" id="b28-i5-Ez1"/>
-                        <outlet property="changeTeamGIF" destination="0nf-cf-DYa" id="LCA-8Y-y7y"/>
                         <outlet property="currentTeamGIF" destination="dwC-gg-hKd" id="zKo-px-D06"/>
                         <outlet property="mainCard" destination="5fl-ri-jhV" id="EBw-c8-RYh"/>
                         <outlet property="monikersCardBack" destination="PBZ-0e-Agd" id="QDq-xV-0uu"/>
@@ -198,18 +210,18 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2570" y="217"/>
+            <point key="canvasLocation" x="2568.8000000000002" y="216.34182908545728"/>
         </scene>
         <!--Pass The PhoneVC-->
         <scene sceneID="sk4-Ws-NVc">
             <objects>
                 <viewController id="Pg9-b3-KZd" customClass="PassThePhoneVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="umg-D3-QtO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-vL-lYI">
-                                <rect key="frame" x="94.666666666666686" y="307" width="200" height="200"/>
+                                <rect key="frame" x="74.5" y="238" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1xZ-OD-Yor"/>
                                     <constraint firstAttribute="width" secondItem="XMg-vL-lYI" secondAttribute="height" multiplier="1:1" id="2OS-NJ-Pz0"/>
@@ -224,7 +236,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hip-3x-LbE">
-                                <rect key="frame" x="94.666666666666686" y="589" width="226" height="63"/>
+                                <rect key="frame" x="74.5" y="520" width="226" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="FTc-Y0-CCL"/>
                                 </constraints>
@@ -261,13 +273,13 @@
             <objects>
                 <viewController id="oRb-uo-upw" customClass="EndGameVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGH-eJ-sZ8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-vD-XdW">
-                                <rect key="frame" x="87.666666666666686" y="617" width="239" height="60"/>
+                                <rect key="frame" x="73" y="548" width="239" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8AQ-0H-rl5"/>
+                                    <constraint firstAttribute="height" constant="60" id="5je-em-Kkb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -279,68 +291,71 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-yh-kzr">
-                                <rect key="frame" x="107" y="363" width="200" height="200"/>
+                                <rect key="frame" x="107" y="324" width="170" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YVA-yh-kzr" secondAttribute="height" multiplier="1:1" id="nts-dq-K0g"/>
+                                    <constraint firstAttribute="height" constant="170" id="0CL-ZJ-TWR"/>
+                                    <constraint firstAttribute="width" constant="170" id="lbd-tR-90o"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-fD-kzC">
-                                <rect key="frame" x="154" y="142" width="68" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-fD-kzC">
+                                <rect key="frame" x="115" y="142" width="186" height="25"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="68" id="C4h-n8-RQT"/>
-                                    <constraint firstAttribute="height" constant="25" id="bj8-kZ-Giq"/>
-                                    <constraint firstAttribute="width" constant="68" id="eJn-Ua-iWJ"/>
+                                    <constraint firstAttribute="height" constant="25" id="Tw0-Cw-YlB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-mU-bd2">
-                                <rect key="frame" x="154" y="256" width="68" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-mU-bd2">
+                                <rect key="frame" x="115" y="217" width="186" height="25"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="UP2-Zp-pYB"/>
+                                    <constraint firstAttribute="height" constant="25" id="u0g-zQ-YeI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3M-Ar-v2H">
-                                <rect key="frame" x="51" y="107" width="95" height="95"/>
+                                <rect key="frame" x="51" y="127" width="56" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="G3M-Ar-v2H" secondAttribute="height" multiplier="1:1" id="1lc-HW-RIw"/>
+                                    <constraint firstAttribute="width" constant="56" id="sSn-3Z-ddI"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jd7-Dc-Um7">
-                                <rect key="frame" x="51" y="221" width="95" height="95"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jd7-Dc-Um7" secondAttribute="height" multiplier="1:1" id="94K-uQ-OQe"/>
-                                </constraints>
+                                <rect key="frame" x="51" y="202" width="56" height="56"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMP-mj-Oxe">
+                                <rect key="frame" x="98" y="43" width="189" height="39"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.066666666669999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YVA-yh-kzr" firstAttribute="leading" secondItem="nhe-0m-rwC" secondAttribute="leading" constant="107" id="04b-Gm-iEF"/>
-                            <constraint firstItem="vTu-fD-kzC" firstAttribute="leading" secondItem="G3M-Ar-v2H" secondAttribute="trailing" constant="8" symbolic="YES" id="1C9-wI-tfz"/>
-                            <constraint firstItem="nhe-0m-rwC" firstAttribute="trailing" secondItem="vTu-fD-kzC" secondAttribute="trailing" constant="192" id="6qu-vO-S3E"/>
-                            <constraint firstItem="vTu-fD-kzC" firstAttribute="top" secondItem="nhe-0m-rwC" secondAttribute="top" constant="122" id="9nT-fM-MYv"/>
-                            <constraint firstItem="vTu-fD-kzC" firstAttribute="trailing" secondItem="WEd-mU-bd2" secondAttribute="trailing" id="EPu-P4-RJZ"/>
-                            <constraint firstItem="jd7-Dc-Um7" firstAttribute="centerY" secondItem="WEd-mU-bd2" secondAttribute="centerY" id="IAP-kp-kXo"/>
-                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nhe-0m-rwC" secondAttribute="top" constant="50" id="VMD-FD-iE5"/>
-                            <constraint firstItem="YVA-yh-kzr" firstAttribute="centerX" secondItem="aGH-eJ-sZ8" secondAttribute="centerX" id="VlM-iu-Rdt"/>
-                            <constraint firstItem="jd7-Dc-Um7" firstAttribute="top" secondItem="G3M-Ar-v2H" secondAttribute="bottom" constant="19" id="Yff-QH-7IZ"/>
-                            <constraint firstItem="ViD-vD-XdW" firstAttribute="top" secondItem="YVA-yh-kzr" secondAttribute="bottom" constant="54" id="ZX3-Gy-VLo"/>
-                            <constraint firstItem="YVA-yh-kzr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jd7-Dc-Um7" secondAttribute="bottom" constant="47" id="c2J-Fh-a2i"/>
-                            <constraint firstItem="YVA-yh-kzr" firstAttribute="centerX" secondItem="ViD-vD-XdW" secondAttribute="centerX" id="cD9-gq-2KY"/>
-                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="leading" secondItem="jd7-Dc-Um7" secondAttribute="leading" id="dEG-hK-0ix"/>
-                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="centerY" secondItem="vTu-fD-kzC" secondAttribute="centerY" id="dQD-ol-Pq0"/>
-                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="leading" secondItem="nhe-0m-rwC" secondAttribute="leading" constant="51" id="hTU-ne-JK8"/>
-                            <constraint firstItem="YVA-yh-kzr" firstAttribute="top" secondItem="WEd-mU-bd2" secondAttribute="bottom" constant="82" id="mXz-ee-tca"/>
-                            <constraint firstItem="vTu-fD-kzC" firstAttribute="leading" secondItem="WEd-mU-bd2" secondAttribute="leading" id="ouT-67-VOP"/>
-                            <constraint firstItem="nhe-0m-rwC" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vTu-fD-kzC" secondAttribute="trailing" constant="213" id="um9-dI-aXV"/>
-                            <constraint firstItem="WEd-mU-bd2" firstAttribute="leading" secondItem="jd7-Dc-Um7" secondAttribute="trailing" constant="8" symbolic="YES" id="v6H-lY-eZX"/>
-                            <constraint firstItem="nhe-0m-rwC" firstAttribute="bottom" secondItem="ViD-vD-XdW" secondAttribute="bottom" constant="59" id="wN1-Tj-mBd"/>
+                            <constraint firstItem="vTu-fD-kzC" firstAttribute="trailing" secondItem="WEd-mU-bd2" secondAttribute="trailing" id="00h-aV-hDP"/>
+                            <constraint firstItem="vTu-fD-kzC" firstAttribute="leading" secondItem="G3M-Ar-v2H" secondAttribute="trailing" constant="8" symbolic="YES" id="4BT-qB-pNf"/>
+                            <constraint firstItem="jd7-Dc-Um7" firstAttribute="centerY" secondItem="WEd-mU-bd2" secondAttribute="centerY" id="7eY-vq-k87"/>
+                            <constraint firstItem="zMP-mj-Oxe" firstAttribute="top" secondItem="nhe-0m-rwC" secondAttribute="top" constant="23" id="9Tg-dn-Ey0"/>
+                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="top" secondItem="zMP-mj-Oxe" secondAttribute="bottom" constant="45" id="B22-9y-IaU"/>
+                            <constraint firstItem="ViD-vD-XdW" firstAttribute="top" secondItem="YVA-yh-kzr" secondAttribute="bottom" constant="54" id="HX7-h9-jgd"/>
+                            <constraint firstItem="YVA-yh-kzr" firstAttribute="centerX" secondItem="ViD-vD-XdW" secondAttribute="centerX" id="I0T-qv-i8J"/>
+                            <constraint firstItem="jd7-Dc-Um7" firstAttribute="top" secondItem="G3M-Ar-v2H" secondAttribute="bottom" constant="19" id="JID-qu-lfB"/>
+                            <constraint firstItem="YVA-yh-kzr" firstAttribute="leading" secondItem="nhe-0m-rwC" secondAttribute="leading" constant="107" id="Mp1-IV-KWh"/>
+                            <constraint firstItem="vTu-fD-kzC" firstAttribute="top" secondItem="zMP-mj-Oxe" secondAttribute="bottom" constant="60" id="RD9-li-KOa"/>
+                            <constraint firstItem="vTu-fD-kzC" firstAttribute="leading" secondItem="WEd-mU-bd2" secondAttribute="leading" id="UH2-pO-6P7"/>
+                            <constraint firstItem="WEd-mU-bd2" firstAttribute="top" secondItem="vTu-fD-kzC" secondAttribute="bottom" constant="50" id="WTD-Ot-BMC"/>
+                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="leading" secondItem="jd7-Dc-Um7" secondAttribute="leading" id="a36-hb-C9Z"/>
+                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="leading" secondItem="nhe-0m-rwC" secondAttribute="leading" constant="51" id="bro-ix-ueG"/>
+                            <constraint firstItem="nhe-0m-rwC" firstAttribute="trailing" secondItem="vTu-fD-kzC" secondAttribute="trailing" constant="74" id="poA-5J-VZX"/>
+                            <constraint firstItem="YVA-yh-kzr" firstAttribute="top" secondItem="WEd-mU-bd2" secondAttribute="bottom" constant="82" id="raC-1j-Zvb"/>
+                            <constraint firstItem="zMP-mj-Oxe" firstAttribute="centerX" secondItem="YVA-yh-kzr" secondAttribute="centerX" id="u8B-s7-gkK"/>
+                            <constraint firstItem="ViD-vD-XdW" firstAttribute="leading" secondItem="nhe-0m-rwC" secondAttribute="leading" constant="73" id="uBM-uM-NAV"/>
+                            <constraint firstItem="nhe-0m-rwC" firstAttribute="bottom" secondItem="ViD-vD-XdW" secondAttribute="bottom" constant="59" id="uqL-jl-ciu"/>
+                            <constraint firstItem="WEd-mU-bd2" firstAttribute="leading" secondItem="jd7-Dc-Um7" secondAttribute="trailing" constant="8" symbolic="YES" id="xZV-Sd-BVq"/>
+                            <constraint firstItem="G3M-Ar-v2H" firstAttribute="centerY" secondItem="vTu-fD-kzC" secondAttribute="centerY" id="z6r-2I-GBz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nhe-0m-rwC"/>
                     </view>
@@ -355,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avk-KG-UYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3549" y="148"/>
+            <point key="canvasLocation" x="3548" y="147.97601199400302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AOs-Ay-CWl">
@@ -377,33 +392,30 @@
             <objects>
                 <viewController id="Fb7-1i-bh0" customClass="RoundInstructionsVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EZp-dc-0HB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team One's turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIH-Ij-xug">
-                                <rect key="frame" x="78" y="43" width="259" height="39.333333333333343"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83o-sj-BRv">
-                                <rect key="frame" x="120" y="349.33333333333331" width="174" height="38.666666666666686"/>
+                                <rect key="frame" x="58" y="47" width="259" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="eSd-yl-wpy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Si3-9e-dWO">
-                                <rect key="frame" x="107" y="114.33333333333331" width="200" height="200"/>
+                                <rect key="frame" x="112" y="129" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="LzG-Z4-tiR"/>
-                                    <constraint firstAttribute="width" secondItem="Si3-9e-dWO" secondAttribute="height" multiplier="1:1" id="tkW-eB-5I9"/>
-                                    <constraint firstAttribute="width" constant="200" id="uvA-nk-DzH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="EP4-Rb-86N"/>
+                                    <constraint firstAttribute="height" constant="150" id="Eex-wZ-Y86"/>
+                                    <constraint firstAttribute="width" constant="150" id="Icf-ft-YWM"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKa-WX-1aQ">
-                                <rect key="frame" x="107" y="653" width="226" height="63"/>
+                                <rect key="frame" x="87" y="574" width="226" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="Sn5-D8-7FU"/>
+                                    <constraint firstAttribute="height" constant="63" id="qwE-zZ-vFP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
                                 <state key="normal" title=" Start turn ">
@@ -413,25 +425,40 @@
                                     <action selector="startButton:" destination="Fb7-1i-bh0" eventType="touchUpInside" id="8Z3-Ia-sGR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get your team to guess as many names as they can in 60 seconds using words, sounds, &amp; charades. Just don't say the name itself." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfq-Ab-ON7">
-                                <rect key="frame" x="39" y="396" width="336" height="228"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your team to guess as many names as they can in 60 seconds using words, sounds, &amp; charades. Just don't say the name itself." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfq-Ab-ON7">
+                                <rect key="frame" x="19" y="345" width="336" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="7cm-Ld-JL1"/>
+                                    <constraint firstAttribute="width" constant="336" id="f1K-JQ-VGI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83o-sj-BRv">
+                                <rect key="frame" x="100" y="298" width="174" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="NZf-xI-HNb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Si3-9e-dWO" firstAttribute="centerX" secondItem="83o-sj-BRv" secondAttribute="centerX" id="2Zn-5t-IAU"/>
-                            <constraint firstItem="EIH-Ij-xug" firstAttribute="centerX" secondItem="Si3-9e-dWO" secondAttribute="centerX" id="LnD-GO-0Xa"/>
-                            <constraint firstItem="83o-sj-BRv" firstAttribute="top" secondItem="Si3-9e-dWO" secondAttribute="bottom" constant="35" id="Py5-sv-2cA"/>
-                            <constraint firstItem="EIH-Ij-xug" firstAttribute="centerX" secondItem="EZp-dc-0HB" secondAttribute="centerX" id="SfO-3q-5w0"/>
-                            <constraint firstAttribute="bottom" secondItem="mKa-WX-1aQ" secondAttribute="bottom" constant="20" symbolic="YES" id="UYA-vd-1Nc"/>
-                            <constraint firstItem="Si3-9e-dWO" firstAttribute="top" secondItem="EIH-Ij-xug" secondAttribute="bottom" constant="32" id="h9W-3L-2Hi"/>
-                            <constraint firstItem="EIH-Ij-xug" firstAttribute="top" secondItem="bSV-AQ-XV3" secondAttribute="top" constant="23" id="k4d-M7-XDY"/>
-                            <constraint firstItem="Si3-9e-dWO" firstAttribute="leading" secondItem="mKa-WX-1aQ" secondAttribute="leading" id="lqn-du-7wt"/>
-                            <constraint firstItem="83o-sj-BRv" firstAttribute="centerY" secondItem="EZp-dc-0HB" secondAttribute="centerY" id="uP3-Oy-9GS"/>
+                            <constraint firstItem="Si3-9e-dWO" firstAttribute="leading" secondItem="bSV-AQ-XV3" secondAttribute="leading" constant="112" id="2Mj-IN-H5m"/>
+                            <constraint firstItem="Mfq-Ab-ON7" firstAttribute="top" secondItem="83o-sj-BRv" secondAttribute="bottom" constant="8" symbolic="YES" id="AKn-uD-pBx"/>
+                            <constraint firstItem="EIH-Ij-xug" firstAttribute="top" secondItem="bSV-AQ-XV3" secondAttribute="top" constant="27" id="Axg-fB-WYE"/>
+                            <constraint firstItem="mKa-WX-1aQ" firstAttribute="leading" secondItem="bSV-AQ-XV3" secondAttribute="leading" constant="87" id="CHF-37-X4f"/>
+                            <constraint firstItem="mKa-WX-1aQ" firstAttribute="top" secondItem="Mfq-Ab-ON7" secondAttribute="bottom" constant="1" id="Ie0-2p-fkF"/>
+                            <constraint firstItem="Si3-9e-dWO" firstAttribute="top" secondItem="EIH-Ij-xug" secondAttribute="bottom" constant="41" id="Qne-uW-iz2"/>
+                            <constraint firstItem="EIH-Ij-xug" firstAttribute="centerX" secondItem="Si3-9e-dWO" secondAttribute="centerX" id="WTS-bw-HZ2"/>
+                            <constraint firstItem="83o-sj-BRv" firstAttribute="top" secondItem="Si3-9e-dWO" secondAttribute="bottom" constant="19" id="g8I-1j-TOP"/>
+                            <constraint firstItem="83o-sj-BRv" firstAttribute="centerX" secondItem="Mfq-Ab-ON7" secondAttribute="centerX" id="ivr-c1-ZQr"/>
+                            <constraint firstItem="Si3-9e-dWO" firstAttribute="centerX" secondItem="EZp-dc-0HB" secondAttribute="centerX" id="k7Z-Yw-t8t"/>
+                            <constraint firstItem="Si3-9e-dWO" firstAttribute="centerX" secondItem="83o-sj-BRv" secondAttribute="centerX" id="mWU-H4-s5J"/>
+                            <constraint firstItem="bSV-AQ-XV3" firstAttribute="bottom" secondItem="mKa-WX-1aQ" secondAttribute="bottom" constant="30" id="tRj-Vz-AZ0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bSV-AQ-XV3"/>
                     </view>
@@ -446,50 +473,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcO-wj-Qur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599" y="-642"/>
+            <point key="canvasLocation" x="4597.6000000000004" y="-642.72863568215894"/>
         </scene>
         <!--End Of RoundVC-->
         <scene sceneID="Mr8-mb-9Jq">
             <objects>
                 <viewController id="AVD-bc-aFd" customClass="EndOfRoundVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kbc-8r-NfT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End of Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-kQ-sdv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End of Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-kQ-sdv">
                                 <rect key="frame" x="98" y="59" width="219" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spb-i1-PYt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spb-i1-PYt">
                                 <rect key="frame" x="194" y="193" width="154" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="DTp-mt-8C9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-tD-1ud">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-tD-1ud">
                                 <rect key="frame" x="194" y="386" width="145" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pAD-Va-pRn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-vH-8qS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-vH-8qS">
                                 <rect key="frame" x="61" y="170" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="3ak-ha-fnG"/>
+                                    <constraint firstAttribute="height" constant="125" id="km1-Il-Yr3"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-eK-dKb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-eK-dKb">
                                 <rect key="frame" x="61" y="359" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="lrP-Nt-apV"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-SA-7BH">
-                                <rect key="frame" x="108" y="656" width="198" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-SA-7BH">
+                                <rect key="frame" x="88" y="577" width="199" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9RS-ka-DSx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next round">
@@ -501,6 +538,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uDh-vH-8qS" firstAttribute="leading" secondItem="9Je-eK-dKb" secondAttribute="leading" id="0MR-lI-PBK"/>
+                            <constraint firstItem="p0j-kQ-sdv" firstAttribute="leading" secondItem="hcF-iX-NBb" secondAttribute="leading" constant="98" id="1tO-Mh-cfU"/>
+                            <constraint firstItem="9Je-eK-dKb" firstAttribute="top" secondItem="uDh-vH-8qS" secondAttribute="bottom" constant="64" id="A8V-B7-WbW"/>
+                            <constraint firstItem="RYb-SA-7BH" firstAttribute="leading" secondItem="hcF-iX-NBb" secondAttribute="leading" constant="88" id="AfU-AM-PDL"/>
+                            <constraint firstItem="uDh-vH-8qS" firstAttribute="leading" secondItem="hcF-iX-NBb" secondAttribute="leading" constant="61" id="ELN-4b-Esz"/>
+                            <constraint firstItem="hcF-iX-NBb" firstAttribute="trailing" secondItem="6Ev-tD-1ud" secondAttribute="trailing" constant="36" id="LCO-Sq-OZt"/>
+                            <constraint firstItem="spb-i1-PYt" firstAttribute="top" secondItem="p0j-kQ-sdv" secondAttribute="bottom" constant="95" id="LMy-7T-PAW"/>
+                            <constraint firstItem="9Je-eK-dKb" firstAttribute="centerY" secondItem="6Ev-tD-1ud" secondAttribute="centerY" id="Nbg-OW-CrS"/>
+                            <constraint firstItem="spb-i1-PYt" firstAttribute="leading" secondItem="uDh-vH-8qS" secondAttribute="trailing" constant="8" symbolic="YES" id="XRK-Yg-nhb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RYb-SA-7BH" secondAttribute="bottom" constant="30" id="ayd-1g-5EZ"/>
+                            <constraint firstItem="spb-i1-PYt" firstAttribute="leading" secondItem="6Ev-tD-1ud" secondAttribute="leading" id="d3Y-TT-M8B"/>
+                            <constraint firstItem="6Ev-tD-1ud" firstAttribute="leading" secondItem="9Je-eK-dKb" secondAttribute="trailing" constant="8" symbolic="YES" id="e48-dY-uJN"/>
+                            <constraint firstItem="uDh-vH-8qS" firstAttribute="top" secondItem="p0j-kQ-sdv" secondAttribute="bottom" constant="72" id="iKI-ON-2zR"/>
+                            <constraint firstItem="p0j-kQ-sdv" firstAttribute="top" secondItem="hcF-iX-NBb" secondAttribute="top" constant="39" id="k4a-J0-lig"/>
+                            <constraint firstItem="hcF-iX-NBb" firstAttribute="trailing" secondItem="spb-i1-PYt" secondAttribute="trailing" constant="27" id="kOG-dD-WnI"/>
+                            <constraint firstItem="p0j-kQ-sdv" firstAttribute="centerX" secondItem="RYb-SA-7BH" secondAttribute="centerX" constant="20" id="l7w-yU-N5c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hcF-iX-NBb"/>
                     </view>
                     <navigationItem key="navigationItem" id="81d-nt-PtN"/>
@@ -521,21 +576,13 @@
             <objects>
                 <viewController id="JC6-iE-ZCf" customClass="DraftOrPlayVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Hm-pm-QKH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass the phone to the next player to select cards." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-0l-Zon">
-                                <rect key="frame" x="62" y="85" width="291" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-Kn-tU9">
-                                <rect key="frame" x="110" y="533" width="214" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-Kn-tU9">
+                                <rect key="frame" x="80" y="515" width="214" height="122"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-eK-iYC">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-eK-iYC">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                         <state key="normal" title=" Select cards ">
@@ -545,7 +592,7 @@
                                             <action selector="draftButton:" destination="JC6-iE-ZCf" eventType="touchUpInside" id="nqe-OP-Jfg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-Vn-cLs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-Vn-cLs">
                                         <rect key="frame" x="0.0" y="71" width="196" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                         <state key="normal" title=" Start game ">
@@ -557,16 +604,41 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="XzC-Ns-pth"/>
+                                    <constraint firstAttribute="height" constant="122" id="dA2-cW-V8Q"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or if everyone has has gone, start the game." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCn-xU-GNc">
-                                <rect key="frame" x="62" y="261" width="291" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or if everyone has has gone, start the game." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCn-xU-GNc">
+                                <rect key="frame" x="42" y="248" width="291" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="GnF-gM-Cab"/>
+                                    <constraint firstAttribute="width" constant="291" id="abs-DG-7NH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass the phone to the next player to select cards." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-0l-Zon">
+                                <rect key="frame" x="42" y="50" width="291" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="C6n-L0-ow4"/>
+                                    <constraint firstAttribute="height" constant="168" id="QAG-0V-kP0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.066666666669999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NqC-0l-Zon" firstAttribute="centerX" secondItem="j3c-RI-owY" secondAttribute="centerX" id="1Eu-GA-Xbm"/>
+                            <constraint firstItem="KCn-xU-GNc" firstAttribute="centerX" secondItem="j3c-RI-owY" secondAttribute="centerX" id="Cdq-bI-TcE"/>
+                            <constraint firstItem="NqC-0l-Zon" firstAttribute="top" secondItem="j3c-RI-owY" secondAttribute="top" constant="30" id="eG2-fL-2iI"/>
+                            <constraint firstItem="KCn-xU-GNc" firstAttribute="top" secondItem="NqC-0l-Zon" secondAttribute="bottom" constant="30" id="eJi-GX-KAT"/>
+                            <constraint firstItem="jTr-Kn-tU9" firstAttribute="centerX" secondItem="j3c-RI-owY" secondAttribute="centerX" id="nvM-4o-2Kg"/>
+                            <constraint firstItem="j3c-RI-owY" firstAttribute="bottom" secondItem="jTr-Kn-tU9" secondAttribute="bottom" constant="30" id="pTE-c2-Ipu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="j3c-RI-owY"/>
                     </view>
                     <connections>
@@ -583,24 +655,11 @@
             <objects>
                 <viewController id="DKY-9k-QIb" customClass="InstructionsVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7c-G5-XNx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-cy-dLh">
-                                <rect key="frame" x="91" y="625" width="233" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <state key="normal" title="  Select cards  ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="selectCardsButton:" destination="DKY-9k-QIb" eventType="touchUpInside" id="AB0-9z-XDr"/>
-                                    <segue destination="996-fF-bhy" kind="show" identifier="DraftingSegue" id="W9h-zO-7JX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-0A-Paj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-0A-Paj">
                                 <rect key="frame" x="20" y="20" width="32" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -610,15 +669,37 @@
                                     <action selector="backButton:" destination="fG7-6B-D7N" eventType="touchUpInside" id="yy9-XJ-67p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starting with you, everyone will select 5 cards to include in the game" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84t-bB-oI6" userLabel="Instructions">
-                                <rect key="frame" x="43" y="109" width="329" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting with you, everyone will select 5 cards to include in the game" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84t-bB-oI6" userLabel="Instructions">
+                                <rect key="frame" x="39.5" y="81" width="296" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="327" id="T7g-0a-paT"/>
+                                    <constraint firstAttribute="width" constant="296" id="Vro-LN-doi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-cy-dLh">
+                                <rect key="frame" x="71" y="586" width="233" height="51"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <state key="normal" title="  Select cards  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCardsButton:" destination="DKY-9k-QIb" eventType="touchUpInside" id="AB0-9z-XDr"/>
+                                    <segue destination="996-fF-bhy" kind="show" identifier="DraftingSegue" id="W9h-zO-7JX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.066666666669999999" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="84t-bB-oI6" firstAttribute="centerX" secondItem="z90-Wt-UBb" secondAttribute="centerX" id="3Wn-4J-Iee"/>
+                            <constraint firstItem="bzb-cy-dLh" firstAttribute="centerX" secondItem="z90-Wt-UBb" secondAttribute="centerX" id="4uC-4F-lbI"/>
+                            <constraint firstItem="84t-bB-oI6" firstAttribute="top" secondItem="7aG-0A-Paj" secondAttribute="bottom" constant="10" id="9v2-Ti-S5Q"/>
+                            <constraint firstItem="7aG-0A-Paj" firstAttribute="leading" secondItem="z90-Wt-UBb" secondAttribute="leading" constant="20" id="B09-Bu-FbP"/>
+                            <constraint firstItem="7aG-0A-Paj" firstAttribute="top" secondItem="z90-Wt-UBb" secondAttribute="top" id="Ipx-Sf-Pwv"/>
+                            <constraint firstItem="z90-Wt-UBb" firstAttribute="bottom" secondItem="bzb-cy-dLh" secondAttribute="bottom" constant="30" id="Kc7-5f-3zW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="z90-Wt-UBb"/>
                     </view>
                     <connections>
@@ -628,24 +709,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDB-2F-6lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.811594202898561" y="147.55434782608697"/>
+            <point key="canvasLocation" x="76" y="147.07646176911544"/>
         </scene>
         <!--DraftingVC-->
         <scene sceneID="mPa-8g-1DR">
             <objects>
                 <viewController id="996-fF-bhy" customClass="DraftingVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fbl-Gk-n44">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3c-b9-raE" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="158" width="254" height="420"/>
+                                <rect key="frame" x="59" y="144" width="256.5" height="399"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NWn-EK-sim">
-                                <rect key="frame" x="67" y="631" width="280" height="61"/>
+                                <rect key="frame" x="48" y="576" width="280" height="61"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z35-yX-z4L" userLabel="cardsRemainingView">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="61"/>
@@ -759,13 +840,22 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="I3T-mB-npc"/>
-                                    <constraint firstAttribute="height" constant="61" id="Qk3-9t-fWt"/>
+                                    <constraint firstAttribute="height" constant="61" id="381-p1-4cD"/>
+                                    <constraint firstAttribute="width" constant="280" id="rIe-Jg-z5I"/>
                                 </constraints>
                             </stackView>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-HO-qA3" customClass="DraftCardView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="158" width="254" height="420"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to choose your five cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-CO-99B">
+                                <rect key="frame" x="55.5" y="20" width="264" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="aSW-zm-FoV"/>
+                                    <constraint firstAttribute="width" constant="264" id="coO-Ch-oz8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-HO-qA3" customClass="DraftCardView" customModule="Monikers" customModuleProvider="target">
+                                <rect key="frame" x="59" y="144" width="256.5" height="399"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-dN-qrt">
                                         <rect key="frame" x="8" y="78" width="238" height="182"/>
@@ -782,39 +872,27 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lTh-HO-qA3" secondAttribute="height" multiplier="9:14" id="AbA-ke-QPi"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ekv-Ck-Ku5" appends="YES" id="51D-ov-n8f"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-eT-2zY">
-                                <rect key="frame" x="20" y="20" width="32" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <state key="normal" title="←">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButton:" destination="996-fF-bhy" eventType="touchUpInside" id="DqK-0r-gfg"/>
-                                    <action selector="backButton:" destination="DKY-9k-QIb" eventType="touchUpInside" id="HCM-b1-a9j"/>
-                                    <action selector="backButton:" destination="fG7-6B-D7N" eventType="touchUpInside" id="v72-C2-xIj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe to choose your five cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-CO-99B">
-                                <rect key="frame" x="64" y="20" width="287" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.066666666666666666" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Y3c-b9-raE" firstAttribute="centerY" secondItem="Fbl-Gk-n44" secondAttribute="centerY" id="055-rh-uvV"/>
-                            <constraint firstItem="Y3c-b9-raE" firstAttribute="leading" secondItem="opw-7c-v9m" secondAttribute="leading" constant="80" id="083-0K-RYH"/>
-                            <constraint firstItem="NWn-EK-sim" firstAttribute="centerX" secondItem="Fbl-Gk-n44" secondAttribute="centerX" id="EA5-Bg-G8U"/>
-                            <constraint firstItem="opw-7c-v9m" firstAttribute="bottom" secondItem="NWn-EK-sim" secondAttribute="bottom" constant="44" id="RN7-V2-2dQ"/>
-                            <constraint firstItem="NWn-EK-sim" firstAttribute="top" secondItem="Y3c-b9-raE" secondAttribute="bottom" constant="53" id="U7x-5B-mLf"/>
-                            <constraint firstItem="Y3c-b9-raE" firstAttribute="centerX" secondItem="NWn-EK-sim" secondAttribute="centerX" id="x4Y-yW-fkk"/>
+                            <constraint firstItem="0X7-CO-99B" firstAttribute="top" secondItem="opw-7c-v9m" secondAttribute="top" id="0tg-bn-FIW"/>
+                            <constraint firstItem="lTh-HO-qA3" firstAttribute="top" secondItem="Y3c-b9-raE" secondAttribute="top" id="1ms-wk-n9U"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="leading" secondItem="lTh-HO-qA3" secondAttribute="leading" id="AbN-qt-B8y"/>
+                            <constraint firstItem="NWn-EK-sim" firstAttribute="centerX" secondItem="opw-7c-v9m" secondAttribute="centerX" id="Fw1-GU-6Aa"/>
+                            <constraint firstItem="lTh-HO-qA3" firstAttribute="centerY" secondItem="opw-7c-v9m" secondAttribute="centerY" id="Syf-9b-7nI"/>
+                            <constraint firstItem="0X7-CO-99B" firstAttribute="centerX" secondItem="opw-7c-v9m" secondAttribute="centerX" id="aoJ-ME-XdM"/>
+                            <constraint firstItem="NWn-EK-sim" firstAttribute="top" secondItem="lTh-HO-qA3" secondAttribute="bottom" constant="33" id="cjS-A5-c4X"/>
+                            <constraint firstItem="opw-7c-v9m" firstAttribute="bottom" secondItem="NWn-EK-sim" secondAttribute="bottom" constant="30" id="fBW-bC-gfX"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="height" secondItem="lTh-HO-qA3" secondAttribute="height" id="fEO-8z-9oz"/>
+                            <constraint firstItem="lTh-HO-qA3" firstAttribute="centerX" secondItem="opw-7c-v9m" secondAttribute="centerX" id="gsi-GC-3tp"/>
+                            <constraint firstItem="Y3c-b9-raE" firstAttribute="width" secondItem="lTh-HO-qA3" secondAttribute="width" id="s3h-Dm-mhY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="opw-7c-v9m"/>
                     </view>
@@ -843,21 +921,20 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="831.88405797101461" y="147.55434782608697"/>
+            <point key="canvasLocation" x="831.20000000000005" y="146.17691154422789"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="kCO-Lz-cb4">
             <objects>
                 <viewController id="fyE-Zs-GS2" customClass="MenuVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C2q-9i-APd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YOU-9c-S9E">
-                                <rect key="frame" x="102" y="523" width="210" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YOU-9c-S9E">
+                                <rect key="frame" x="82.5" y="444" width="210" height="193"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-AS-wH1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-AS-wH1">
                                         <rect key="frame" x="8" y="0.0" width="194" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                         <state key="normal" title=" New Game ">
@@ -867,14 +944,14 @@
                                             <segue destination="fG7-6B-D7N" kind="show" identifier="NewGameSegue" id="OAN-mh-Hk5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-tT-f0p">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-tT-f0p">
                                         <rect key="frame" x="0.0" y="71" width="210" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                         <state key="normal" title=" How to Play ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-wd-D2c">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-wd-D2c">
                                         <rect key="frame" x="30" y="142" width="150" height="51"/>
                                         <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                         <state key="normal" title=" Settings ">
@@ -882,61 +959,51 @@
                                         </state>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YOU-9c-S9E" secondAttribute="height" multiplier="210:193" id="ZHE-Nk-Vsh"/>
+                                </constraints>
                             </stackView>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-XS-PLs" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="63" width="254" height="420"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-XS-PLs" customClass="MonikerCardBackView" customModule="Monikers" customModuleProvider="target">
+                                <rect key="frame" x="63.5" y="40" width="247.5" height="384"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                            </view>
-                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95N-W1-VZF" customClass="DraftCardView" customModule="Monikers" customModuleProvider="target">
-                                <rect key="frame" x="80" y="63" width="254" height="420"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAt-nj-7ch">
-                                        <rect key="frame" x="8" y="78" width="238" height="182"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ThumpDown" translatesAutoresizingMaskIntoConstraints="NO" id="ooE-zh-Byi">
-                                        <rect key="frame" x="41" y="106" width="168" height="160"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="a1D-XS-PLs" secondAttribute="height" multiplier="9:14" id="jHA-03-M3K"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YOU-9c-S9E" firstAttribute="centerX" secondItem="7qy-xo-BR2" secondAttribute="centerX" id="455-en-2sw"/>
+                            <constraint firstItem="a1D-XS-PLs" firstAttribute="top" secondItem="7qy-xo-BR2" secondAttribute="top" priority="750" constant="20" id="Ia6-4K-Kr1"/>
+                            <constraint firstItem="7qy-xo-BR2" firstAttribute="bottom" secondItem="YOU-9c-S9E" secondAttribute="bottom" constant="30" id="Zu5-yh-UNx"/>
+                            <constraint firstItem="a1D-XS-PLs" firstAttribute="centerX" secondItem="YOU-9c-S9E" secondAttribute="centerX" id="lOr-U4-L3I"/>
+                            <constraint firstItem="YOU-9c-S9E" firstAttribute="top" secondItem="a1D-XS-PLs" secondAttribute="bottom" constant="20" id="vHu-Km-xEL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7qy-xo-BR2"/>
                     </view>
                     <connections>
                         <outlet property="cardBackOutlet" destination="a1D-XS-PLs" id="JYh-aS-cYi"/>
                         <outlet property="howToPlayOutlet" destination="TbE-tT-f0p" id="3aM-Jt-f9l"/>
-                        <outlet property="mainCardOutlet" destination="95N-W1-VZF" id="ts4-Ij-uP1"/>
                         <outlet property="newGameOutlet" destination="Bue-AS-wH1" id="t4Q-W7-6DU"/>
                         <outlet property="settingsOUtlet" destination="6NQ-wd-D2c" id="ZNj-dc-EAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPc-Xl-M2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2201" y="174"/>
+            <point key="canvasLocation" x="-2202.4000000000001" y="173.16341829085459"/>
         </scene>
         <!--New GameVC-->
         <scene sceneID="rJo-6d-BXX">
             <objects>
                 <viewController id="fG7-6B-D7N" customClass="NewGameVC" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nJV-7r-XLz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-Km-Mx6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-Km-Mx6">
                                 <rect key="frame" x="20" y="20" width="32" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -945,16 +1012,19 @@
                                     <action selector="backButton:" destination="fG7-6B-D7N" eventType="touchUpInside" id="81w-8K-ryt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OK, first thing: divide into two teams of roughly the same size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-0b-BVg">
-                                <rect key="frame" x="48" y="91" width="318" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OK, first thing: divide into two teams of roughly the same size." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-0b-BVg">
+                                <rect key="frame" x="49.5" y="81" width="276" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="Ars-GZ-kwi"/>
+                                    <constraint firstAttribute="width" constant="276" id="RuV-pC-5Rh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="312" id="SEt-8l-ihb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-qz-zyP">
-                                <rect key="frame" x="155" y="614" width="104" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-qz-zyP">
+                                <rect key="frame" x="135.5" y="586" width="104" height="51"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <state key="normal" title=" Done ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -965,6 +1035,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.066666666669999999" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fnj-0b-BVg" firstAttribute="centerX" secondItem="nJV-7r-XLz" secondAttribute="centerX" id="1qe-uf-xQV"/>
+                            <constraint firstItem="OeJ-qz-zyP" firstAttribute="centerX" secondItem="9Io-A4-NtV" secondAttribute="centerX" id="50b-UD-81S"/>
+                            <constraint firstItem="s8d-Km-Mx6" firstAttribute="top" secondItem="9Io-A4-NtV" secondAttribute="top" id="AUR-z2-feg"/>
+                            <constraint firstItem="s8d-Km-Mx6" firstAttribute="leading" secondItem="9Io-A4-NtV" secondAttribute="leading" constant="20" id="Ekx-20-VQb"/>
+                            <constraint firstItem="9Io-A4-NtV" firstAttribute="bottom" secondItem="OeJ-qz-zyP" secondAttribute="bottom" constant="30" id="XNA-fg-Td9"/>
+                            <constraint firstItem="fnj-0b-BVg" firstAttribute="top" secondItem="s8d-Km-Mx6" secondAttribute="bottom" constant="10" id="ZLp-bS-qzH"/>
+                            <constraint firstItem="s8d-Km-Mx6" firstAttribute="top" secondItem="9Io-A4-NtV" secondAttribute="top" id="e1T-Mu-0sP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Io-A4-NtV"/>
                     </view>
                     <connections>
@@ -973,18 +1052,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2H-q2-eqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1413" y="148"/>
+            <point key="canvasLocation" x="-1413.75" y="147.5"/>
         </scene>
         <!--Team Select View Controller-->
         <scene sceneID="j2h-II-tEx">
             <objects>
                 <viewController id="nIj-aA-0sy" customClass="TeamSelectViewController" customModule="Monikers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hrm-X3-2IL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-9N-5GA">
-                                <rect key="frame" x="109.66666666666669" y="616" width="196" height="51"/>
+                                <rect key="frame" x="89.5" y="586" width="196" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="Sx3-Ku-hvd"/>
                                 </constraints>
@@ -997,25 +1076,18 @@
                                     <segue destination="DKY-9k-QIb" kind="show" identifier="DraftInstructionsSegue" id="voj-nq-3Pn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For each team, tap the images below to change mascots" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG5-Ht-nvi">
-                                <rect key="frame" x="59" y="56" width="296" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ada-Ag-DEC">
-                                <rect key="frame" x="254" y="351" width="106" height="105"/>
+                                <rect key="frame" x="215" y="321" width="106" height="105"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBZ-5u-ITT">
-                                <rect key="frame" x="254" y="481" width="106" height="105"/>
+                                <rect key="frame" x="215" y="451" width="106" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xBZ-5u-ITT" secondAttribute="height" multiplier="1:1" constant="1" id="3Cn-M6-omy"/>
                                     <constraint firstAttribute="width" secondItem="xBZ-5u-ITT" secondAttribute="height" multiplier="1:1" constant="1" id="65n-T0-8Eb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZK-dy-JMf">
-                                <rect key="frame" x="61.333333333333329" y="391" width="172.66666666666669" height="25"/>
+                                <rect key="frame" x="22" y="361" width="173" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="7e8-CG-NyD"/>
                                 </constraints>
@@ -1024,7 +1096,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjz-Xf-JIq">
-                                <rect key="frame" x="254" y="351" width="106" height="105"/>
+                                <rect key="frame" x="215" y="321" width="106" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qjz-Xf-JIq" secondAttribute="height" multiplier="1:1" constant="1" id="jfq-Ts-8r8"/>
                                 </constraints>
@@ -1033,7 +1105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L3-j7-gry">
-                                <rect key="frame" x="254" y="481" width="106" height="105"/>
+                                <rect key="frame" x="215" y="451" width="106" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4L3-j7-gry" secondAttribute="height" multiplier="1:1" constant="1" id="PFr-B2-LYo"/>
                                     <constraint firstAttribute="height" constant="105" id="yeI-hB-CwO"/>
@@ -1043,12 +1115,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Two" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDS-N7-JNh">
-                                <rect key="frame" x="61.333333333333329" y="502" width="159.66666666666669" height="42"/>
+                                <rect key="frame" x="22" y="472" width="160" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="YdN-0c-Ysv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="32"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For each team, tap the images below to change mascots" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG5-Ht-nvi">
+                                <rect key="frame" x="39" y="40" width="296" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="3gZ-Ls-Rey"/>
+                                    <constraint firstAttribute="width" constant="296" id="rut-Nr-ZeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1063,16 +1145,18 @@
                             <constraint firstItem="WZK-dy-JMf" firstAttribute="leading" secondItem="lDS-N7-JNh" secondAttribute="leading" id="Jms-2s-olR"/>
                             <constraint firstItem="BhJ-9N-5GA" firstAttribute="top" secondItem="xBZ-5u-ITT" secondAttribute="bottom" constant="30" id="L77-lU-i9T"/>
                             <constraint firstItem="ada-Ag-DEC" firstAttribute="trailing" secondItem="xBZ-5u-ITT" secondAttribute="trailing" id="Mtr-TK-B9T"/>
+                            <constraint firstItem="MG5-Ht-nvi" firstAttribute="top" secondItem="4Z5-v6-mpd" secondAttribute="top" constant="20" id="Nz9-kb-FQn"/>
                             <constraint firstItem="4Z5-v6-mpd" firstAttribute="trailing" secondItem="ada-Ag-DEC" secondAttribute="trailing" constant="54" id="O0k-Td-XzK"/>
                             <constraint firstItem="ada-Ag-DEC" firstAttribute="trailing" secondItem="qjz-Xf-JIq" secondAttribute="trailing" id="UOH-G3-9oz"/>
                             <constraint firstItem="WZK-dy-JMf" firstAttribute="centerY" secondItem="ada-Ag-DEC" secondAttribute="centerY" id="UhM-p5-iwA"/>
+                            <constraint firstItem="MG5-Ht-nvi" firstAttribute="centerX" secondItem="4Z5-v6-mpd" secondAttribute="centerX" id="Wbf-BT-LkS"/>
                             <constraint firstItem="lDS-N7-JNh" firstAttribute="top" secondItem="WZK-dy-JMf" secondAttribute="bottom" constant="86" id="chF-nx-kb6"/>
                             <constraint firstItem="ada-Ag-DEC" firstAttribute="leading" secondItem="xBZ-5u-ITT" secondAttribute="leading" id="da5-gc-gLr"/>
                             <constraint firstItem="qjz-Xf-JIq" firstAttribute="leading" secondItem="WZK-dy-JMf" secondAttribute="trailing" constant="20" id="hKs-2w-RGV"/>
                             <constraint firstItem="qjz-Xf-JIq" firstAttribute="leading" secondItem="ada-Ag-DEC" secondAttribute="leading" id="jJ9-KA-k21"/>
                             <constraint firstItem="xBZ-5u-ITT" firstAttribute="leading" secondItem="lDS-N7-JNh" secondAttribute="trailing" constant="33" id="jYE-Ao-1QT"/>
                             <constraint firstItem="BhJ-9N-5GA" firstAttribute="centerX" secondItem="hrm-X3-2IL" secondAttribute="centerX" id="nDV-vX-OZ4"/>
-                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="bottom" secondItem="BhJ-9N-5GA" secondAttribute="bottom" constant="69" id="qY5-mm-YUu"/>
+                            <constraint firstItem="4Z5-v6-mpd" firstAttribute="bottom" secondItem="BhJ-9N-5GA" secondAttribute="bottom" constant="30" id="qY5-mm-YUu"/>
                             <constraint firstItem="xBZ-5u-ITT" firstAttribute="trailing" secondItem="4L3-j7-gry" secondAttribute="trailing" id="rvC-JE-Cgt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Z5-v6-mpd"/>
@@ -1091,11 +1175,9 @@
     <resources>
         <image name="ThumpDown" width="168" height="160"/>
         <image name="cardsRemainingIcon" width="204" height="317"/>
-        <image name="changeTeam.gif" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kYd-aR-2ND"/>
-        <segue reference="kgQ-Tv-Ylt"/>
-        <segue reference="630-gl-5Vg"/>
+        <segue reference="K4c-Te-dXd"/>
+        <segue reference="cM3-zB-2qm"/>
     </inferredMetricsTieBreakers>
 </document>

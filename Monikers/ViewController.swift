@@ -45,7 +45,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var currentTeamGIF: UIImageView!
     @IBOutlet weak var startButtonLabel: UIButton!
-    @IBOutlet weak var changeTeamGIF: UIImageView!
     @IBOutlet weak var startGameOutlet: UIButton!
     
     override func viewDidLoad() {
@@ -59,14 +58,24 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
         roundLabel.text = game.currentRound.rawValue
         timerLabel.text = ("\(game.time)")
         mainCard.alpha = 0
-        mainCard.center = self.view.center
         rotationDivsor = (view.frame.width / 2) / 0.61 //degree of tilt expressed in radians
-        changeTeamGIF.isHidden = true
         cardsRemaining.text = "\(namesArray.count)"
         startGameOutlet.layer.borderWidth = 2
         startGameOutlet.layer.cornerRadius = 5
         startGameOutlet.layer.borderColor = UIColor.white.cgColor
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        monikersCardBack.center = view.center
+        mainCard.center = view.center
+    }
+    
+//    override func viewDidLayoutSubviews() {
+//        monikersCardBack.center = view.center
+//        mainCard.center = view.center
+//        print("!!!!!")
+//    }
     
     @IBAction func pauseButton(_ sender: UIButton) {
         if game.turnInProgress {
@@ -91,9 +100,6 @@ class ViewController: UIViewController, timeDelegate, roundDelegate, teamDelegat
     
     @IBAction func startButton(_ sender: UIButton) {
         if !game.turnInProgress && !paused {
-            if !changeTeamGIF.isHidden {
-                changeTeamGIF.isHidden = true
-            }
             game.startTurn()
             UIView.transition(with: mainCard, duration: 0.3, options: .transitionFlipFromRight, animations: nil, completion: nil)
             self.drawNewCard()
