@@ -16,6 +16,8 @@
 		2F35CED0210E9EFB004953C9 /* DraftingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CECF210E9EFB004953C9 /* DraftingVC.swift */; };
 		2F35CED2210E9F1F004953C9 /* DraftingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED1210E9F1F004953C9 /* DraftingModel.swift */; };
 		2F35CED4210F658A004953C9 /* DraftOrPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */; };
+		2F6525602141D9B100F19903 /* DataTracker.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2F65255F2141D9B000F19903 /* DataTracker.csv */; };
+		2F6525642141E1F900F19903 /* DataTracker.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2F6525632141E1F900F19903 /* DataTracker.txt */; };
 		2F7990A020F0025D0054DE3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79909F20F0025D0054DE3F /* AppDelegate.swift */; };
 		2F7990A220F0025D0054DE3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7990A120F0025D0054DE3F /* ViewController.swift */; };
 		2F7990A520F0025D0054DE3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7990A320F0025D0054DE3F /* Main.storyboard */; };
@@ -57,9 +59,12 @@
 		2FE4332920FA6813004B178F /* fish-play.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4332620FA6812004B178F /* fish-play.gif */; };
 		2FE4332A20FA6813004B178F /* fish-win.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4332720FA6813004B178F /* fish-win.gif */; };
 		2FE4332B20FA6813004B178F /* fish-select.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4332820FA6813004B178F /* fish-select.gif */; };
+		C479C8A87BB243BFF700D58A /* libPods-Monikers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F99FD7519B3314DE69063AA /* libPods-Monikers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059148E82000C7BC6AE79D34 /* Pods-Monikers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monikers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Monikers/Pods-Monikers.debug.xcconfig"; sourceTree = "<group>"; };
+		1F9CEFA646D3DCD8DCE9D0D9 /* Pods-Monikers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monikers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Monikers/Pods-Monikers.release.xcconfig"; sourceTree = "<group>"; };
 		2F07455720FC418300CD8979 /* MonikerCardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonikerCardBackView.swift; sourceTree = "<group>"; };
 		2F0EE31320FBB89300B3C5FB /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		2F31330A2114B947008CF028 /* EndOfRoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfRoundVC.swift; sourceTree = "<group>"; };
@@ -69,6 +74,8 @@
 		2F35CECF210E9EFB004953C9 /* DraftingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingVC.swift; sourceTree = "<group>"; };
 		2F35CED1210E9F1F004953C9 /* DraftingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftingModel.swift; sourceTree = "<group>"; };
 		2F35CED3210F658A004953C9 /* DraftOrPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftOrPlayVC.swift; sourceTree = "<group>"; };
+		2F65255F2141D9B000F19903 /* DataTracker.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataTracker.csv; sourceTree = "<group>"; };
+		2F6525632141E1F900F19903 /* DataTracker.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataTracker.txt; sourceTree = "<group>"; };
 		2F79909C20F0025D0054DE3F /* Monikers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monikers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F79909F20F0025D0054DE3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7990A120F0025D0054DE3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +119,7 @@
 		2FE4332620FA6812004B178F /* fish-play.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "fish-play.gif"; sourceTree = "<group>"; };
 		2FE4332720FA6813004B178F /* fish-win.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "fish-win.gif"; sourceTree = "<group>"; };
 		2FE4332820FA6813004B178F /* fish-select.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "fish-select.gif"; sourceTree = "<group>"; };
+		8F99FD7519B3314DE69063AA /* libPods-Monikers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Monikers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C479C8A87BB243BFF700D58A /* libPods-Monikers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +139,8 @@
 			children = (
 				2F79909E20F0025D0054DE3F /* Monikers */,
 				2F79909D20F0025D0054DE3F /* Products */,
+				78A372A7E0995ADFA84B81F4 /* Pods */,
+				B74DA8DD616A47F313E6E530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +158,8 @@
 				2F79909F20F0025D0054DE3F /* AppDelegate.swift */,
 				2F7990A620F0025E0054DE3F /* Assets.xcassets */,
 				2F31330C2114C0F4008CF028 /* changeTeam.gif */,
+				2F65255F2141D9B000F19903 /* DataTracker.csv */,
+				2F6525632141E1F900F19903 /* DataTracker.txt */,
 				2F35CECD210C0817004953C9 /* DraftCardView.swift */,
 				2F35CED1210E9F1F004953C9 /* DraftingModel.swift */,
 				2F35CECF210E9EFB004953C9 /* DraftingVC.swift */,
@@ -263,6 +276,23 @@
 			path = Fish;
 			sourceTree = "<group>";
 		};
+		78A372A7E0995ADFA84B81F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				059148E82000C7BC6AE79D34 /* Pods-Monikers.debug.xcconfig */,
+				1F9CEFA646D3DCD8DCE9D0D9 /* Pods-Monikers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B74DA8DD616A47F313E6E530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F99FD7519B3314DE69063AA /* libPods-Monikers.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +300,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7990AE20F0025E0054DE3F /* Build configuration list for PBXNativeTarget "Monikers" */;
 			buildPhases = (
+				CE4D1782D46E9B50F4FC8F99 /* [CP] Check Pods Manifest.lock */,
 				2F79909820F0025D0054DE3F /* Sources */,
 				2F79909920F0025D0054DE3F /* Frameworks */,
 				2F79909A20F0025D0054DE3F /* Resources */,
@@ -328,6 +359,7 @@
 				2FE4332A20FA6813004B178F /* fish-win.gif in Resources */,
 				2FE4330E20FA661E004B178F /* cat-select.gif in Resources */,
 				2FE4332220FA67E0004B178F /* doll-play.gif in Resources */,
+				2F6525602141D9B100F19903 /* DataTracker.csv in Resources */,
 				2FE4331620FA672E004B178F /* schrodinger-select.gif in Resources */,
 				2FE432F020FA4B5C004B178F /* tie-win.gif in Resources */,
 				2FE4332920FA6813004B178F /* fish-play.gif in Resources */,
@@ -343,6 +375,7 @@
 				2F7990A720F0025E0054DE3F /* Assets.xcassets in Resources */,
 				2FE4330120FA6525004B178F /* twins-win.gif in Resources */,
 				2F7990A520F0025D0054DE3F /* Main.storyboard in Resources */,
+				2F6525642141E1F900F19903 /* DataTracker.txt in Resources */,
 				2FE4331B20FA6775004B178F /* brain-select.gif in Resources */,
 				2F7990B620F0055F0054DE3F /* Names.txt in Resources */,
 				2FE4330820FA655A004B178F /* blacula-play.gif in Resources */,
@@ -353,6 +386,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE4D1782D46E9B50F4FC8F99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Monikers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F79909820F0025D0054DE3F /* Sources */ = {
@@ -522,6 +576,7 @@
 		};
 		2F7990AF20F0025E0054DE3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059148E82000C7BC6AE79D34 /* Pods-Monikers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +595,7 @@
 		};
 		2F7990B020F0025E0054DE3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F9CEFA646D3DCD8DCE9D0D9 /* Pods-Monikers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

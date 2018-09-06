@@ -7,18 +7,49 @@
 //
 
 import Foundation
+
 class DraftingModel {
-    
     var namesArray = [String]()
     var namesForPlayArray = [String]()
     var currentDraftingArray = [String]()
     var currentNumberOfPlayers = 0
     var currentNumberOfCardsSelected = 0
-    let draftsize = 10
+    let draftsize = 20
+    
+    var dataTrackerDictionary = [String: [Int]]()
+    var dataTrackerArray = [String]()
     
     init() {
-        importNamesFromFile()
+//        importNamesFromFile()
+        createDataDictionary()
         createNewDraftingArray()
+    }
+    
+    func  createDataDictionary() {
+        let path = Bundle.main.path(forResource: "DataTracker", ofType: "txt")
+        let filemgr = FileManager.default
+        if filemgr.fileExists(atPath: path!) {
+            do {
+                let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
+                dataTrackerArray = fullText.components(separatedBy: "\n")
+            }
+            catch { print("Can't read from file/file does not exist") }
+        }
+        for card in dataTrackerArray {
+            let tempCard = card
+            let result = tempCard.split(separator: ",")
+            let name = String(result[0])
+            let seen = Int(result[1])
+            let chosen = Int(result[2])
+            var tempValues = [Int]()
+            tempValues.append(seen!)
+            tempValues.append(chosen!)
+            dataTrackerDictionary[name] = tempValues
+        }
+        for names in dataTrackerDictionary.keys {
+            namesArray.append(names)
+        }
+        print(dataTrackerDictionary)
     }
     
     func createNewDraftingArray() {
@@ -34,7 +65,12 @@ class DraftingModel {
     }
     
     func drawFromCurrentDraftingArray() -> String? {
-        return currentDraftingArray.remove(at: 0)
+        let newName = currentDraftingArray.remove(at: 0)
+        var oldValue = dataTrackerDictionary[newName]
+        oldValue![0] += 1
+        dataTrackerDictionary[newName] = oldValue!
+        
+        return newName
     }
     
     func skipCard(_ name: String) {
@@ -42,6 +78,10 @@ class DraftingModel {
     }
     
     func acceptCard(_ name: String) {
+        var oldValue = dataTrackerDictionary[name]
+        oldValue![1] += 1
+        dataTrackerDictionary[name] = oldValue!
+        
         namesForPlayArray.append(name)
         if namesForPlayArray.count == currentNumberOfPlayers * 5 {
             currentNumberOfCardsSelected += 1
