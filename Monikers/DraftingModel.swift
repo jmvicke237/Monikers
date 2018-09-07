@@ -40,16 +40,32 @@ class DraftingModel {
             let result = tempCard.split(separator: ",")
             let name = String(result[0])
             let seen = Int(result[1])
-            let chosen = Int(result[2])
+            let drafted = Int(result[2])
             var tempValues = [Int]()
             tempValues.append(seen!)
-            tempValues.append(chosen!)
+            tempValues.append(drafted!)
             dataTrackerDictionary[name] = tempValues
         }
         for names in dataTrackerDictionary.keys {
             namesArray.append(names)
         }
         print(dataTrackerDictionary)
+    }
+    
+    func convertDictionaryToString() {
+        var tempArray = [String]()
+        for entry in dataTrackerDictionary.keys {
+            let tempValue = dataTrackerDictionary[entry]
+            let seen = String(tempValue![0])
+            let drafted = String(tempValue![1])
+            let tempEntry = "\(entry),\(seen),\(drafted)"
+            tempArray.append(tempEntry)
+        }
+        var newDataTrackerString = ""
+        for entry in tempArray {
+            newDataTrackerString += "\(entry)\n"
+        }
+        print(newDataTrackerString)
     }
     
     func createNewDraftingArray() {

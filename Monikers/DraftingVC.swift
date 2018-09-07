@@ -37,7 +37,6 @@ class DraftingVC: UIViewController {
     override func viewDidLayoutSubviews() {
         cardBackView.center = view.center
         mainCard.center = view.center
-        print("!!!!!!")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -98,8 +97,6 @@ class DraftingVC: UIViewController {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 }, completion: {(finished:Bool) in card.center = self.view.center
-                    print(card.center)
-                    print(self.view.frame.height)
                     self.thumbImageView.alpha = 0
                     card.transform = CGAffineTransform.identity
                     self.cardRemainingImage[self.draft.currentNumberOfCardsSelected].image = UIImage(named: "cardsRemainingWhiteIcon")
@@ -108,6 +105,11 @@ class DraftingVC: UIViewController {
                     if self.draft.currentNumberOfCardsSelected == 5 || self.draft.currentDraftingArray.isEmpty{
                         self.mainCardLabel.text = ""
                         self.draft.createNewDraftingArray()
+                        
+                        
+                        self.draft.convertDictionaryToString()
+                        
+                        
                         self.performSegue(withIdentifier: "DraftOrPlaySegue", sender:self)
                         for index in 0..<self.cardRemainingImage.count {
                             self.cardRemainingImage[index].image = UIImage(named: "cardsRemainingIcon")
